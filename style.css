@@ -19,22 +19,31 @@
 
 html {
     font-family: "Montserrat", Verdana, sans-serif;
-    padding: 5px;
-    overflow-y: scroll;
     font-size: 13px;
     background-color: #003366;
     word-wrap: break-word;
     color: #ffffff;
 }
-
-.subtitles {
-    color: #ffcc33;
-    font-size: 15px;
+.title {
+  color: #ffcc33;
+  text-align: center;
+  font-size: 5em;
+  font-weight: bold;
+}
+.subtitle {
+    color: #ffffff;
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
 }
 
 .handwrite {
     color: #ffffff;
     font-family: "Just Another Hand", Verdana, sans-serif;
+}
+
+.centre {
+  text-align:center;
 }
 
 a:link {
