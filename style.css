@@ -1,0 +1,51 @@
+
+  @font-face {
+    font-family: 'Just Another Hand';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(fonts/just-another-hand.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(fonts/montserrat.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+html {
+    font-family: "Montserrat", Verdana, sans-serif;
+    padding: 5px;
+    overflow-y: scroll;
+    font-size: 13px;
+    background-color: #003366;
+    word-wrap: break-word;
+    color: #ffffff;
+}
+
+.subtitles {
+    color: #ffcc33;
+    font-size: 15px;
+}
+
+.handwrite {
+    color: #ffffff;
+    font-family: "Just Another Hand", Verdana, sans-serif;
+}
+
+a:link {
+	color: #ffffff;
+}
+a:visited {
+	color: #d6d6d6;
+}
+a:hover {
+	color: #8d8d8d;
+}
+a:active {
+	color: #ffffff;
+}
