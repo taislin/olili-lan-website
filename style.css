@@ -89,10 +89,14 @@ div, iframe {
 }
 table {
   text-align: center;
-  border-collapse: separate;
-  width: 300px;
+  border-collapse: collapse;
   border-width: 1px;
   border-style: outset;
   border-color: #ffffff;
   margin: 0 auto;
+}
+
+table td, table th {
+  border: 1px solid #ffffff;
+  padding:5px;
 }
