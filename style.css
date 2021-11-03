@@ -33,7 +33,7 @@ h1 {
 .biglinks {
   color: #ffffff;
   text-align: center;
-  font-size: 1.4em;
+  font-size: 2.5em;
   font-weight: bold;
 }
 
@@ -47,6 +47,8 @@ h1 {
 .handwrite {
     font-family: "Patrick Hand", cursive, sans-serif;
     font-size: 1.2em;
+    width:66%;
+    text-align:center;
 }
 
 .centre {
