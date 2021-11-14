@@ -46,28 +46,26 @@ function translate(text, direction) {
 	if (text == "") return "";
 	var translatedText = "";
 	if (
-		!(
-			[]
-				.concat(
-					phrases1,
-					phrases2,
-					words1,
-					words2,
-					intraword1,
-					intraword2,
-					prefixes1,
-					prefixes2,
-					suffixes1,
-					suffixes2,
-					regex1,
-					regex2,
-					rev_regex1,
-					rev_regex2,
-					ordering1,
-					ordering2
-				)
-				.join("").length === 0
-		)
+		[]
+			.concat(
+				phrases1,
+				phrases2,
+				words1,
+				words2,
+				intraword1,
+				intraword2,
+				prefixes1,
+				prefixes2,
+				suffixes1,
+				suffixes2,
+				regex1,
+				regex2,
+				rev_regex1,
+				rev_regex2,
+				ordering1,
+				ordering2
+			)
+			.join("").length !== 0
 	) {
 		sentenceCount = 0;
 		var sentenceArray = text.split(/(\.)/g);
