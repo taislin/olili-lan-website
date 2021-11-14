@@ -158,8 +158,8 @@ var translationInQueue = false;
 var queuedTranslationDirection = false;
 var translationInProgress = false;
 var workerInitStarted = false;
-var olililanPlaceholderText = "olili-lan goes here...";
-var englishPlaceholderText = "english goes here...";
+var olililanPlaceholderText = document.querySelector("#olililan-text").getAttribute("placeholder");
+var englishPlaceholderText = document.querySelector("#english-text").getAttribute("placeholder");
 function translateWithWebWorker(text, direction) {
 	if (direction === "backward") {
 		$("#english-text").attr("placeholder", "");
@@ -219,10 +219,8 @@ function startWorker() {
 			}
 			translationInProgress = false;
 			if (e.data.direction === "backward") {
-				$("#english-text").css("background-image", "none");
 				$("#english-text").attr("placeholder", englishPlaceholderText);
 			} else {
-				$("#olililan-text").css("background-image", "none");
 				$("#olililan-text").attr("placeholder", olililanPlaceholderText);
 			}
 			if (translationInQueue) {
