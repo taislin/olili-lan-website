@@ -74,7 +74,7 @@ function translate(text, direction) {
 		)
 	) {
 		sentenceCount = 0;
-		sentenceArray = text.split(".");
+		var sentenceArray = text.split(".");
 		sentenceArray = sentenceArray.filter(function (s) {
 			return s !== "";
 		});

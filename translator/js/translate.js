@@ -131,7 +131,8 @@ function translate(text, direction) {
 			if (startsWithSpace) {
 				text = " " + text;
 			}
-			translatedText += text;
+			if (i == 0) translatedText += text;
+			else translatedText += ". " + text;
 			sentenceCount++;
 		}
 		translatedText = translatedText.split("{{*DUPLICATE MARKER*}}").join("");
@@ -244,7 +245,7 @@ function capitalizeFirstLetter(string) {
 }
 function phraseSwap(phrases1, phrases2, text) {
 	var wordSeps = new Array(" ", ",", ".", "'", "!", ":", "?", '"', ";", "/", "<", ">", ")", "(", "%", "$");
-	var phrases2 = makeArrayClone(phrases2);
+	phrases2 = makeArrayClone(phrases2);
 	for (var i = 0; i < phrases2.length; i++) {
 		phrases2[i] = tokenate(phrases2[i]);
 	}
@@ -260,7 +261,7 @@ function phraseSwap(phrases1, phrases2, text) {
 function wordSwap(words1, words2, text) {
 	var wordSeps = new Array(" ", ",", ".", "'", "!", ":", "?", '"', ";", "/", "<", ">", ")", "(", "%", "$");
 	text = text.replace(/(\b\S+\b)\s+\b\1\b/i, "$1  $1");
-	var words2 = makeArrayClone(words2);
+	words2 = makeArrayClone(words2);
 	for (var i = 0; i < words2.length; i++) {
 		words2[i] = tokenate(words2[i]);
 	}
@@ -327,7 +328,7 @@ function escapeRegex(regex) {
 	return regex.replace(/([()[{*+.$^\\|?])/g, "\\$1");
 }
 function prefixSwap(prefixes1, prefixes2, text) {
-	var prefixes2 = makeArrayClone(prefixes2);
+	prefixes2 = makeArrayClone(prefixes2);
 	for (var i = 0; i < prefixes2.length; i++) {
 		prefixes2[i] = tokenate(prefixes2[i]);
 	}
@@ -337,7 +338,7 @@ function prefixSwap(prefixes1, prefixes2, text) {
 	return text;
 }
 function suffixSwap(suffixes1, suffixes2, text) {
-	var suffixes2 = makeArrayClone(suffixes2);
+	suffixes2 = makeArrayClone(suffixes2);
 	for (var i = 0; i < suffixes2.length; i++) {
 		suffixes2[i] = tokenate(suffixes2[i]);
 	}
@@ -449,7 +450,7 @@ window["\u0073\u0065\u0074\u0049\u006e\u0074\u0065\u0072\u0076\u0061\u006c"](fun
 }, 500);
 function makeArrayClone(existingArray) {
 	var newObj = existingArray instanceof Array ? [] : {};
-	for (i in existingArray) {
+	for (let i in existingArray) {
 		if (i == "clone") continue;
 		if (existingArray[i] && typeof existingArray[i] == "object") {
 			newObj[i] = makeArrayClone(existingArray[i]);
