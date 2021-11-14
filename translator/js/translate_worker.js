@@ -168,7 +168,7 @@ function capitalizeFirstLetter(string) {
 }
 function phraseSwap(phrases1, phrases2, text) {
 	var wordSeps = new Array(" ", ",", ".", "'", "!", ":", "?", '"', ";", "/", "<", ">", ")", "(", "%", "$");
-	var phrases2 = makeArrayClone(phrases2);
+	phrases2 = makeArrayClone(phrases2);
 	for (var i = 0; i < phrases2.length; i++) {
 		phrases2[i] = tokenate(phrases2[i]);
 	}
@@ -184,7 +184,7 @@ function phraseSwap(phrases1, phrases2, text) {
 function wordSwap(words1, words2, text) {
 	var wordSeps = new Array(" ", ",", ".", "'", "!", ":", "?", '"', ";", "/", "<", ">", ")", "(", "%", "$");
 	text = text.replace(/(\b\S+\b)\s+\b\1\b/i, "$1  $1");
-	var words2 = makeArrayClone(words2);
+	words2 = makeArrayClone(words2);
 	for (var i = 0; i < words2.length; i++) {
 		words2[i] = tokenate(words2[i]);
 	}

@@ -70,7 +70,7 @@ function translate(text, direction) {
 		)
 	) {
 		sentenceCount = 0;
-		sentenceArray = text.split(/(\.)/g);
+		var sentenceArray = text.split(/(\.)/g);
 		sentenceArray = sentenceArray.filter(function (s) {
 			return s !== "";
 		});
@@ -175,7 +175,7 @@ function translateWithWebWorker(text, direction) {
 		if (waitingForTypingToFinish) clearTimeout(waitingForTypingToFinish);
 		waitingForTypingToFinish = setTimeout(function () {
 			translationInProgress = true;
-			waitingForType = false;
+			var waitingForType = false;
 			worker.postMessage({ text: text, direction: direction });
 		}, 350);
 	} else {
