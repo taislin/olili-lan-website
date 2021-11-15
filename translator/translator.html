@@ -118,7 +118,7 @@
 				var tempdata = data.replace("\r","")
 				var lines = tempdata.split("\n");
 				for (var line = 0; line < lines.length; line++) {
-					var columns = lines[line].split("\t");
+					var columns = lines[line].split(";");
 					for (var column = 0; column < columns.length; column++) {
 						if (column == 0) {
 							array1.push(columns[0].replace('\"','').replace('\"','').replace("\r",""));

@@ -1,177 +1,177 @@
-" - iv"	-POSSESSIVE
-" - os"	-PLURAL
-" - s"	-PLURAL
-" - v"	-POSSESSIVE
-a	ah!
-akala	fish
-akalama	sound
-akali	bird
-akana	fire
-akasi	plant
-akata	animal
-akesi	reptile/amphibian
-akili	fruit/vegetable
-akive	rock
-ako	person
-ako	person
-akolo	color
-akolopo	group
-akon	air
-akote	ear
-alama	thing
-alava	head
-ale	all
-alene	cloth
-alinisa	wave
-alipo	sheet
-alo	tool
-alokin	eye
-alopa	hole
-amalo	love
-amama	parent
-amani	money
-amava	north
-ame	animal noise
-amerta	store
-ameve	east/right
-amivi	south
-amoli	death
-amono	moon
-amonsi	rear
-amota	mouth
-amovo	west/left
-anaka	child
-anamako	extra
-anasin	path
-anena	hill/elevation
-aneta	other
-animi	name
-anoka	leg
-apalisa	stick/wood
-apana	food
-apata	brother
-apilin	feeling
-apini	end
-apipi	bug
-apoki	container
-aposa	day
-aselo	skin
-asike	circle
-asilelo	body
-asipine	face
-asitele	drawing
-asona	knowledge
-asono	sun
-asopa	bed
-asoti	life
-asoveli	vehicle
-atela	land
-atelo	water
-atenepo	time
-atoki	text
-atomo	room
-atono	hand
-avaka	beginning
-avava	power
-avila	home
-avopa	night
-ekala	swim
-ekali	fly
-ekama	come
-ekipisi	cut
-eko	have
-ekote	hear
-elape	sleep
-elasa	hunt
-eli	be
-eliki	think
-elokin	see
-emalo	love
-emerta	to sell
-emoki	eat
-emoli	die
-emosi	play
-epakala	break
-epali	work
-epana	give
-epen	open
-epilin	feel
-epini	end
-esitele	draw
-esona	know
-esoti	live
-etala	fight
-etava	go
-etoki	speak
-evaka	start
-evava	to power
-eveka	drop
-even	keep
-evile	want
-evoki	do/make
-i	I
-ili	he/she/it
-ilip	they
-ip	we
-iti	you
-itip	you
-"kaka - "	FEMALE-
-ken	can
-ki	of
-kili	hundred
-"koko - "	MALE-
-lan	language
-li	there
-lo	this
-mako	blue
-maso	red
-melo	yellow
-"mi - "	[foreign word prefix]
-mili	thousand
-mo	or
-na	not
-na	no
-"na - "	NEGATIVE-
-nama	if
-nanepa	number
-"ni - "	FUTURE-
-oke	bad
-olaki	Yucky/sticky
-olete	cold
-oliki	few
-olili	little/small
-omalo	love
-omama	big
-omote	many
-onepa	Fuck/curseword
-onina	old
-opona	good
-oseli	hot
-osevi	high
-osino	new
-osoli	great
-osovi	sweet
-pepe	now
-"pi - "	PAST-
-pin	indeed
-poka	with
-sama	same
-se	to
-seme	what
-si	yes
-sila	inside
-sipati	god
-so	zero/nothing
-son	in/at/on
-ta	one
-tako	twenty
-tan	from
-taso	but
-tatono	five
-te	two
-ti	three
-tili	million
-to	four
-valo	white
-vo	and
-vola	black
+a;"ah!"
+akala;"fish"
+akalama;"sound"
+akali;"bird"
+akana;"fire"
+akasi;"plant"
+akata;"animal"
+akesi;"reptile/amphibian"
+akili;"fruit/vegetable"
+akive;"rock"
+ako;"person"
+ako;"person"
+akolo;"color"
+akolopo;"group"
+akon;"air"
+akote;"ear"
+alama;"thing"
+alava;"head"
+ale;"all"
+alene;"cloth"
+alinisa;"wave"
+alipo;"sheet"
+alo;"tool"
+alokin;"eye"
+alopa;"hole"
+amalo;"love"
+amama;"parent"
+amani;"money"
+amava;"north"
+ame;"animal noise"
+amerta;"store"
+ameve;"east/right"
+amivi;"south"
+amoli;"death"
+amono;"moon"
+amonsi;"rear"
+amota;"mouth"
+amovo;"west/left"
+anaka;"child"
+anamako;"extra"
+anasin;"path"
+anena;"hill/elevation"
+aneta;"other"
+animi;"name"
+anoka;"leg"
+apalisa;"stick/wood"
+apana;"food"
+apata;"brother"
+apilin;"feeling"
+apini;"end"
+apipi;"bug"
+apoki;"container"
+aposa;"day"
+aselo;"skin"
+asike;"circle"
+asilelo;"body"
+asipine;"face"
+asitele;"drawing"
+asona;"knowledge"
+asono;"sun"
+asopa;"bed"
+asoti;"life"
+asoveli;"vehicle"
+atela;"land"
+atelo;"water"
+atenepo;"time"
+atoki;"text"
+atomo;"room"
+atono;"hand"
+avaka;"beginning"
+avava;"power"
+avila;"home"
+avopa;"night"
+ekala;"swim"
+ekali;"fly"
+ekama;"come"
+ekipisi;"cut"
+eko;"have"
+ekote;"hear"
+elape;"sleep"
+elasa;"hunt"
+eli;"to be"
+eliki;"think"
+elokin;"see"
+emalo;"love"
+emerta;"to sell"
+emoki;"eat"
+emoli;"die"
+emosi;"play"
+epakala;"break"
+epali;"work"
+epana;"give"
+epen;"open"
+epilin;"feel"
+epini;"end"
+esitele;"draw"
+esona;"know"
+esoti;"live"
+etala;"fight"
+etava;"go"
+etoki;"speak"
+evaka;"start"
+evava;"to power"
+eveka;"drop"
+even;"keep"
+evile;"want"
+evoki;"do/make"
+i;"I"
+ili;"he/she/it"
+ilip;"they"
+ip;"we"
+iti;"you"
+itip;"you"
+"kaka - ";"FEMALE-"
+ken;"can"
+ki;"of"
+kili;"hundred"
+"koko - ";"MALE-"
+lan;"language"
+li;"there"
+lo;"this"
+mako;"blue"
+maso;"red"
+melo;"yellow"
+"mi - ";"[foreign word prefix]"
+mili;"thousand"
+mo;"or"
+na;"not"
+na;"no"
+"na - ";"NEGATIVE-"
+nama;"if"
+nanepa;"number"
+"ni - ";"FUTURE-"
+oke;"bad"
+olaki;"Yucky/sticky"
+olete;"cold"
+oliki;"few"
+olili;"little/small"
+omalo;"love"
+omama;"big"
+omote;"many"
+onepa;"Fuck/curseword"
+onina;"old"
+opona;"good"
+oseli;"hot"
+osevi;"high"
+osino;"new"
+osoli;"great"
+osovi;"sweet"
+pepe;"now"
+"pi - ";"PAST-"
+pin;"indeed"
+poka;"with"
+sama;"same"
+se;"to"
+seme;"what"
+si;"yes"
+sila;"inside"
+sipati;"god"
+so;"zero/nothing"
+son;"on"
+ta;"one"
+tako;"twenty"
+tan;"from"
+taso;"but"
+tatono;"five"
+te;"two"
+ti;"three"
+tili;"million"
+to;"four"
+valo;"white"
+vo;"and"
+vola;"black"
+"- s";"-PLURAL"
+"- i";"-POSSESSIVE"
+"- os";"-PLURAL"
+"- iv";"-POSSESSIVE"
