@@ -12,11 +12,6 @@
 		<meta name="description" content="Translate olili-lan to English with this online translator. Based on LingoJam." />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="stylesheet" href="style.css" />
-		<link id="infixes_file" href="./langdata/infixes.csv"/>
-		<link id="prefixes_file" href="./langdata/prefixes.csv"/>
-		<link id="suffixes_file" href="./langdata/suffixes.csv"/>
-		<link id="words_file" href="./langdata/words.csv"/>
-		<link id="phrases_file" href="./langdata/phrases.csv"/>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
 		<script src="./js/translator.js"></script>
 		<script src="./js/translate.js"></script>
@@ -83,6 +78,7 @@ koko-ako etoki poka kaka-ako: iti kaka-ako</textarea
 
 			try {
 				phrases1 = jsonData.phrases1.split("\n");
+				console.log(phrases1);
 				phrases2 = jsonData.phrases2.split("\n");
 				words1 = jsonData.words1.split("\n");
 				words2 = jsonData.words2.split("\n");
