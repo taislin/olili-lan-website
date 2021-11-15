@@ -110,26 +110,6 @@ koko-ako etoki poka kaka-ako: iti kaka-ako</textarea
 				$.get("./langdata/suffixes.csv", function (data) {
 					[jsonData.suffixes1, jsonData.suffixes2] = parseCSV(data);
 				});
-				function parseCSV(data) {
-					// By lines
-					var array1 = "";
-					var array2 = "";
-					var lines = data.split("\n");
-					for (var line = 0; line < lines.length; line++) {
-						var columns = data.split("	");
-						for (var column = 0; column < columns.length; column++) {
-							if (column == 0) {
-								array1 += columns[0];
-								array1 += "\n";
-							}
-							if (column == 1) {
-								array2 += columns[1];
-								array2 += "\n";
-							}
-						}
-					}
-					return [array1, array2];
-				}
 				console.log(jsonData);
 				phrases1 = jsonData.phrases1.split("\n");
 				phrases2 = jsonData.phrases2.split("\n");
@@ -165,7 +145,26 @@ koko-ako etoki poka kaka-ako: iti kaka-ako</textarea
 					while (b.length > a.length) a.push("");
 				}
 			}
-
+			function parseCSV(data) {
+				// By lines
+				var array1 = "";
+				var array2 = "";
+				var lines = data.split("\n");
+				for (var line = 0; line < lines.length; line++) {
+					var columns = data.split("	");
+					for (var column = 0; column < columns.length; column++) {
+						if (column == 0) {
+							array1 += columns[0];
+							array1 += "\n";
+						}
+						if (column == 1) {
+							array2 += columns[1];
+							array2 += "\n";
+						}
+					}
+				}
+				return [array1, array2];
+			}
 			handleDuplicates(words1, words2);
 			/* Initial translate for default text */
 			if ($("#english-text").val() != "") {
