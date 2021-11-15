@@ -53,9 +53,7 @@
 		<div class="translate-container">
 			<div class="halving-div-left">
 				<div class="transdiv english box-shadow-1">
-					<textarea id="english-text" placeholder="olili-lan goes here...">
-koko-ako etoki poka kaka-ako: iti kaka-ako</textarea
-					>
+					<textarea id="english-text" placeholder="olili-lan goes here..."></textarea>
 				</div>
 			</div>
 			<div class="halving-div-right">
@@ -66,66 +64,44 @@ koko-ako etoki poka kaka-ako: iti kaka-ako</textarea
 			<div style="clear: both"></div>
 		</div>
 		<script>
-			try {
-				var reverseIsDisabled = false;
-				//<![CDATA[
+			phrases1 = [],
+			phrases2 = [],
+			words1 = [],
+			words2 = [],
+			suffixes1 = [],
+			suffixes2 = [],
+			intraword1 = [],
+			intraword2 = [],
+			prefixes1 = [],
+			prefixes2 = [],
+			regex1 = [],
+			regex2 = [],
+			rev_regex1 = [],
+			rev_regex2 = [],
+			ordering1 = [],
+			ordering2 = [],
 
-				//]]>
-			} catch (e) {
-				alert("There's an error in the translator script. Error:" + e);
-			}
+			$.get("./langdata/words.csv", function (data) {
+				[words1, words2] = parseCSV(data);
+				evenUpSizes(words1, words2);
+			});
+			$.get("./langdata/phrases.csv", function (data) {
+				[phrases1, phrases2] = parseCSV(data);
+				evenUpSizes(phrases1, phrases2);
+			});
+			$.get("./langdata/infixes.csv", function (data) {
+				[intraword1, intraword2] = parseCSV(data);
+				evenUpSizes(intraword1, intraword2);
+			});
+			$.get("./langdata/prefixes.csv", function (data) {
+				[prefixes1, prefixes2] = parseCSV(data);
+				evenUpSizes(prefixes1, prefixes2);
+			});
+			$.get("./langdata/suffixes.csv", function (data) {
+				[suffixes1, suffixes2] = parseCSV(data);
+				evenUpSizes(suffixes1, suffixes2);
+			});
 
-			try {
-				var jsonData = {
-					phrases1: [],
-					phrases2: [],
-					words1: [],
-					words2: [],
-					suffixes1: [],
-					suffixes2: [],
-					intraword1: [],
-					intraword2: [],
-					prefixes1: [],
-					prefixes2: [],
-					regex1: [],
-					regex2: [],
-					rev_regex1: [],
-					rev_regex2: [],
-					ordering1: [],
-					ordering2: [],
-				};
-
-				$.get("./langdata/words.csv", function (data) {
-					[jsonData.words1, jsonData.words2] = parseCSV(data);
-				});
-				$.get("./langdata/phrases.csv", function (data) {
-					[jsonData.phrases1, jsonData.phrases2] = parseCSV(data);
-				});
-				$.get("./langdata/infixes.csv", function (data) {
-					[jsonData.intraword1, jsonData.intraword2] = parseCSV(data);
-				});
-				$.get("./langdata/prefixes.csv", function (data) {
-					[jsonData.prefixes1, jsonData.prefixes2] = parseCSV(data);
-				});
-				$.get("./langdata/suffixes.csv", function (data) {
-					[jsonData.suffixes1, jsonData.suffixes2] = parseCSV(data);
-				});
-				console.log(jsonData);
-				regex1 = jsonData.regex1
-				regex2 = jsonData.regex2
-				rev_regex1 = jsonData.rev_regex1
-				rev_regex2 = jsonData.rev_regex2
-				ordering1 = jsonData.ordering1
-				ordering2 = jsonData.ordering2
-			} catch (err) {
-				alert("ERROR! Error log: " + err.message);
-			}
-
-			evenUpSizes(jsonData.phrases1, jsonData.phrases2);
-			evenUpSizes(jsonData.words1, jsonData.words2);
-			evenUpSizes(jsonData.intraword1, jsonData.intraword2);
-			evenUpSizes(jsonData.prefixes1, jsonData.prefixes2);
-			evenUpSizes(jsonData.suffixes1, jsonData.suffixes2);
 
 			//fix for mysql trailing newline deletion problem
 			function evenUpSizes(a, b) {
@@ -139,18 +115,21 @@ koko-ako etoki poka kaka-ako: iti kaka-ako</textarea
 				// By lines
 				var array1 = [];
 				var array2 = [];
-				var lines = data.split("\n");
+				var tempdata = data.replace("\r","")
+				var lines = tempdata.split("\n");
 				for (var line = 0; line < lines.length; line++) {
-					var columns = data.split("	");
+					var columns = lines[line].split("\t");
 					for (var column = 0; column < columns.length; column++) {
 						if (column == 0) {
-							array1.push(columns[0]);
+							array1.push(columns[0].replace('\"','').replace('\"','').replace("\r",""));
 						}
 						if (column == 1) {
-							array2.push(columns[1]);
+							array2.push(columns[1].replace('\"','').replace('\"','').replace("\r",""));
 						}
 					}
 				}
+				console.log(array1)
+				console.log(array2)
 				return [array1, array2];
 			}
 			handleDuplicates(words1, words2);
