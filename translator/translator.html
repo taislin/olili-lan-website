@@ -15,7 +15,6 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
 		<script src="./js/translator.js"></script>
 		<script src="./js/translate.js"></script>
-		<script src="./langdata/olililan.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 		<script>
 			eval(
@@ -77,8 +76,62 @@ koko-ako etoki poka kaka-ako: iti kaka-ako</textarea
 			}
 
 			try {
+				var jsonData = {
+					phrases1: "",
+					phrases2: "",
+					words1: "",
+					words2: "",
+					suffixes1: "",
+					suffixes2: "",
+					intraword1: "",
+					intraword2: "",
+					prefixes1: "",
+					prefixes2: "",
+					regex1: "",
+					regex2: "",
+					rev_regex1: "",
+					rev_regex2: "",
+					ordering1: "",
+					ordering2: "",
+				};
+
+				$.get("./langdata/words.csv", function (data) {
+					[jsonData.words1, jsonData.words2] = parseCSV(data);
+				});
+				$.get("./langdata/phrases.csv", function (data) {
+					[jsonData.phrases1, jsonData.phrases2] = parseCSV(data);
+				});
+				$.get("./langdata/infixes.csv", function (data) {
+					[jsonData.intraword1, jsonData.intraword2] = parseCSV(data);
+				});
+				$.get("./langdata/prefixes.csv", function (data) {
+					[jsonData.prefixes1, jsonData.prefixes2] = parseCSV(data);
+				});
+				$.get("./langdata/suffixes.csv", function (data) {
+					[jsonData.suffixes1, jsonData.suffixes2] = parseCSV(data);
+				});
+				function parseCSV(data) {
+					// By lines
+					var array1 = "";
+					var array2 = "";
+					var lines = data.split("\n");
+					for (var line = 0; line < lines.length; line++) {
+						var columns = data.split("	");
+						for (var column = 0; column < columns.length; column++) {
+							if (column == 0) {
+								array1 += columns[0];
+								array1 += "\n";
+							}
+							if (column == 1) {
+								array2 += columns[1];
+								array2 += "\n";
+							}
+						}
+					}
+					return [array1, array2];
+				}
+
 				phrases1 = jsonData.phrases1.split("\n");
-				console.log(phrases1);
 				phrases2 = jsonData.phrases2.split("\n");
 				words1 = jsonData.words1.split("\n");
 				words2 = jsonData.words2.split("\n");
