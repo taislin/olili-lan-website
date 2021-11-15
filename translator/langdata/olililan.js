@@ -31,8 +31,8 @@ $.get("./langdata/prefixes.csv", function (data) {
 });
 $.get("./langdata/suffixes.csv", function (data) {
 	[jsonData.suffixes1, jsonData.suffixes2] = parseCSV(data);
-	console.log(data);
 });
+console.log(jsonData);
 function parseCSV(data) {
 	// By lines
 	var array1 = "";
@@ -49,7 +49,6 @@ function parseCSV(data) {
 				array2 += columns[1];
 				array2 += "\n";
 			}
-			console.log(array1);
 		}
 	}
 	return [array1, array2];
