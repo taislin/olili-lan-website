@@ -18,9 +18,9 @@ function numRules() {
 		ordering2.length
 	);
 }
-var doneToken = "����}�";
-var sentenceCount = 0;
-var useWebWorker = false;
+let doneToken = "����}�";
+let sentenceCount = 0;
+let useWebWorker = false;
 function translate(text, direction) {
 	if (direction === "backward" && reverseIsDisabled) return $("#english-text").val();
 	if (useWebWorker || (typeof forward !== "function" && numRules() > 1000)) {
@@ -28,7 +28,7 @@ function translate(text, direction) {
 		return;
 	}
 	if (text == "") return "";
-	var translatedText = "";
+	let translatedText = "";
 	if (
 		[]
 			.concat(
@@ -52,11 +52,11 @@ function translate(text, direction) {
 			.join("").length !== 0
 	) {
 		sentenceCount = 0;
-		var sentenceArray = text.split(/(\.)/g);
+		let sentenceArray = text.split(/(\.)/g);
 		sentenceArray = sentenceArray.filter(function (s) {
 			return s !== "";
 		});
-		for (var i = 0; i < sentenceArray.length; i++) {
+		for (let i = 0; i < sentenceArray.length; i++) {
 			text = sentenceArray[i];
 			if (text === ".") {
 				translatedText += ".";
@@ -66,11 +66,11 @@ function translate(text, direction) {
 				translatedText += text;
 				continue;
 			}
-			var startsWithSpace = false;
+			let startsWithSpace = false;
 			if (text[0] === " ") {
 				startsWithSpace = true;
 			}
-			var firstLetterIsCapital = false;
+			let firstLetterIsCapital = false;
 			if (text.trim()[0] === text.trim()[0].toUpperCase()) {
 				firstLetterIsCapital = true;
 			}
@@ -134,15 +134,15 @@ function translate(text, direction) {
 	}
 	return translatedText;
 }
-var worker;
-var workerStarted = false;
-var waitingForTypingToFinish = false;
-var translationInQueue = false;
-var queuedTranslationDirection = false;
-var translationInProgress = false;
-var workerInitStarted = false;
-var olililanPlaceholderText = document.querySelector("#olililan-text").getAttribute("placeholder");
-var englishPlaceholderText = document.querySelector("#english-text").getAttribute("placeholder");
+let worker;
+let workerStarted = false;
+let waitingForTypingToFinish = false;
+let translationInQueue = false;
+let queuedTranslationDirection = false;
+let translationInProgress = false;
+let workerInitStarted = false;
+let olililanPlaceholderText = document.querySelector("#olililan-text").getAttribute("placeholder");
+let englishPlaceholderText = document.querySelector("#english-text").getAttribute("placeholder");
 function translateWithWebWorker(text, direction) {
 	if (direction === "backward") {
 		$("#english-text").attr("placeholder", "");
@@ -158,7 +158,7 @@ function translateWithWebWorker(text, direction) {
 		if (waitingForTypingToFinish) clearTimeout(waitingForTypingToFinish);
 		waitingForTypingToFinish = setTimeout(function () {
 			translationInProgress = true;
-			var waitingForType = false;
+			let waitingForType = false;
 			worker.postMessage({ text: text, direction: direction });
 		}, 350);
 	} else {
@@ -226,13 +226,13 @@ function capitalizeFirstLetter(string) {
 	else return string;
 }
 function phraseSwap(phrases1, phrases2, text) {
-	var wordSeps = new Array(" ", ",", ".", "'", "!", ":", "?", '"', ";", "/", "<", ">", ")", "(", "%", "$");
+	let wordSeps = new Array(" ", ",", ".", "'", "!", ":", "?", '"', ";", "/", "<", ">", ")", "(", "%", "$");
 	phrases2 = makeArrayClone(phrases2);
-	for (var i = 0; i < phrases2.length; i++) {
+	for (let i = 0; i < phrases2.length; i++) {
 		phrases2[i] = tokenate(phrases2[i]);
 	}
-	for (var i = 0; i < phrases1.length; i++) {
-		for (var j = 0; j < wordSeps.length; j++) {
+	for (let i = 0; i < phrases1.length; i++) {
+		for (let j = 0; j < wordSeps.length; j++) {
 			if (phrases2[i] !== "")
 				text = text.split(" " + phrases1[i].toLowerCase() + wordSeps[j]).join(" " + phrases2[i] + wordSeps[j]);
 			else text = text.split(" " + phrases1[i].toLowerCase() + wordSeps[j]).join(" ");
@@ -241,33 +241,33 @@ function phraseSwap(phrases1, phrases2, text) {
 	return text;
 }
 function wordSwap(words1, words2, text) {
-	var wordSeps = new Array(" ", ",", ".", "'", "!", ":", "?", '"', ";", "/", "<", ">", ")", "(", "%", "$");
+	let wordSeps = new Array(" ", ",", ".", "'", "!", ":", "?", '"', ";", "/", "<", ">", ")", "(", "%", "$");
 	text = text.replace(/(\b\S+\b)\s+\b\1\b/i, "$1  $1");
 	words2 = makeArrayClone(words2);
-	for (var i = 0; i < words2.length; i++) {
+	for (let i = 0; i < words2.length; i++) {
 		words2[i] = tokenate(words2[i]);
 	}
-	var words1_notags = [];
-	for (var i = 0; i < words1.length; i++) {
+	let words1_notags = [];
+	for (let i = 0; i < words1.length; i++) {
 		if (words1[i] instanceof Array) {
 			words1_notags[i] = [];
-			for (var j = 0; j < words1[i].length; j++) {
+			for (let j = 0; j < words1[i].length; j++) {
 				words1_notags[i][j] = words1[i][j].replace(/\{\{.*\}\}/g, "");
 			}
 		} else {
 			words1_notags[i] = words1[i].replace(/\{\{.*\}\}/g, "");
 		}
 	}
-	for (var i = 0; i < words1_notags.length; i++) {
+	for (let i = 0; i < words1_notags.length; i++) {
 		if (words2[i] instanceof Array) {
-			var l = words2[i].length;
-			var swapWithThis = words2[i][Math.floor(Math.random() * words2[i].length)];
+			let l = words2[i].length;
+			let swapWithThis = words2[i][Math.floor(Math.random() * words2[i].length)];
 		} else {
-			var swapWithThis = words2[i];
+			let swapWithThis = words2[i];
 		}
-		for (var j = 0; j < wordSeps.length; j++) {
+		for (let j = 0; j < wordSeps.length; j++) {
 			if (words1_notags[i] instanceof Array) {
-				for (var k = 0; k < words1_notags[i].length; k++) {
+				for (let k = 0; k < words1_notags[i].length; k++) {
 					if (swapWithThis.length > 0)
 						text = text
 							.split(" " + words1_notags[i][k].toLowerCase() + wordSeps[j])
@@ -289,12 +289,12 @@ function wordSwap(words1, words2, text) {
 	return text;
 }
 function intrawordSwap(intraword1, intraword2, text) {
-	var start = 0;
-	var str = "";
-	var finalText = "";
-	for (var end = 0; end < text.length + 1; end++) {
+	let start = 0;
+	let str = "";
+	let finalText = "";
+	for (let end = 0; end < text.length + 1; end++) {
 		str = text.substring(start, end);
-		for (var i = 0; i < intraword1.length; i++) {
+		for (let i = 0; i < intraword1.length; i++) {
 			if (str.indexOf(intraword1[i]) !== -1) {
 				finalText += str.replace(intraword1[i], intraword2[i]);
 				start = end;
@@ -311,30 +311,30 @@ function escapeRegex(regex) {
 }
 function prefixSwap(prefixes1, prefixes2, text) {
 	prefixes2 = makeArrayClone(prefixes2);
-	for (var i = 0; i < prefixes2.length; i++) {
+	for (let i = 0; i < prefixes2.length; i++) {
 		prefixes2[i] = tokenate(prefixes2[i]);
 	}
-	for (var i = 0; i < prefixes1.length; i++) {
+	for (let i = 0; i < prefixes1.length; i++) {
 		text = text.replace(new RegExp("\\s" + escapeRegex(prefixes1[i]) + "([^\\s])", "g"), " " + prefixes2[i] + "$1");
 	}
 	return text;
 }
 function suffixSwap(suffixes1, suffixes2, text) {
 	suffixes2 = makeArrayClone(suffixes2);
-	for (var i = 0; i < suffixes2.length; i++) {
+	for (let i = 0; i < suffixes2.length; i++) {
 		suffixes2[i] = tokenate(suffixes2[i]);
 	}
-	for (var i = 0; i < suffixes1.length; i++) {
+	for (let i = 0; i < suffixes1.length; i++) {
 		text = text.replace(new RegExp("([^\\s])" + escapeRegex(suffixes1[i]) + "\\s", "g"), "$1" + suffixes2[i] + " ");
 	}
 	return text;
 }
 function regexReplace(regex1, regex2, text) {
-	for (var i = 0; i < regex1.length; i++) {
+	for (let i = 0; i < regex1.length; i++) {
 		if (typeof regex2[0] == "string" || regex2[0] instanceof String) {
-			var match = regex1[i].match(new RegExp("^/(.*?)/([gimy]*)$"));
+			let match = regex1[i].match(new RegExp("^/(.*?)/([gimy]*)$"));
 			if (match) {
-				var properRegEx = new RegExp(match[1], match[2]);
+				let properRegEx = new RegExp(match[1], match[2]);
 				text = text.replace(properRegEx, regex2[i]);
 			}
 		}
@@ -342,21 +342,21 @@ function regexReplace(regex1, regex2, text) {
 	return text;
 }
 function wordOrdering(ordering1, ordering2, text) {
-	for (var i = 0; i < ordering1.length; i++) {
-		var regex = new RegExp(
+	for (let i = 0; i < ordering1.length; i++) {
+		let regex = new RegExp(
 			"([^\\s]+){{" + ordering1[i].trim().replace(/[\s]+/g, " ").split(" ").join("}}[\\s]+([^\\s]+){{") + "}}",
 			"g"
 		);
-		var orderString = getRelativeOrder(
+		let orderString = getRelativeOrder(
 			ordering1[i].replace(/[\s]+/g, " ").split(" "),
 			ordering2[i].replace(/[\s]+/g, " ").split(" ")
 		);
 		text = text.replace(regex, "$" + orderString.split(",").join(" $"));
 	}
-	var alreadyRemovedTags = [];
-	for (var i = 0; i < ordering1.length; i++) {
-		var tags = ordering1[i].trim().replace(/[\s]+/g, " ").split(" ");
-		for (var j = 0; j < tags.length; j++) {
+	let alreadyRemovedTags = [];
+	for (let i = 0; i < ordering1.length; i++) {
+		let tags = ordering1[i].trim().replace(/[\s]+/g, " ").split(" ");
+		for (let j = 0; j < tags.length; j++) {
 			if (alreadyRemovedTags.indexOf(tags[j]) === -1) {
 				text = text.replace("{{" + tags[j] + "}}", "");
 				alreadyRemovedTags.push(tags[j]);
@@ -366,8 +366,8 @@ function wordOrdering(ordering1, ordering2, text) {
 	return text;
 }
 function getRelativeOrder(truth, jumbled) {
-	var order = [];
-	for (var i = 0; i < jumbled.length; i++) {
+	let order = [];
+	for (let i = 0; i < jumbled.length; i++) {
 		if (truth.indexOf(jumbled[i]) !== -1) {
 			order.push(truth.indexOf(jumbled[i]) + 1);
 		} else {
@@ -381,7 +381,7 @@ function removeDoneTokens(text) {
 }
 function tokenate(s) {
 	if (Object.prototype.toString.call(s) === "[object Array]") {
-		for (var i = 0; i < s.length; i++) {
+		for (let i = 0; i < s.length; i++) {
 			s[i] = doneToken + s[i].toString().split("").join(doneToken) + doneToken;
 		}
 		return s;
@@ -390,13 +390,13 @@ function tokenate(s) {
 	}
 }
 function handleDuplicates(words1, words2) {
-	var words1InitialLength = words1.length;
-	for (var i = 0; i < words1InitialLength; i++) {
-		var findDupsOf = words1[i];
-		var dupArray = new Array();
-		var foundDups = false;
+	let words1InitialLength = words1.length;
+	for (let i = 0; i < words1InitialLength; i++) {
+		let findDupsOf = words1[i];
+		let dupArray = new Array();
+		let foundDups = false;
 		if (!(findDupsOf.substring(0, "{{*DUPLICATE MARKER*}}".length) == "{{*DUPLICATE MARKER*}}")) {
-			for (var j = 0; j < words1InitialLength; j++) {
+			for (let j = 0; j < words1InitialLength; j++) {
 				if (findDupsOf == words1[j] && i != j) {
 					dupArray.push(words2[j]);
 					words1[i] = "{{*DUPLICATE MARKER*}}" + words1[i];
@@ -411,7 +411,7 @@ function handleDuplicates(words1, words2) {
 			words2.push(dupArray);
 		}
 	}
-	for (var i = 0; i < words1.length; i++) {
+	for (let i = 0; i < words1.length; i++) {
 		if (words1[i].substring(0, "{{*DUPLICATE MARKER*}}".length) === "{{*DUPLICATE MARKER*}}") {
 			if (i == 0) {
 				words1.shift();
@@ -423,7 +423,7 @@ function handleDuplicates(words1, words2) {
 			}
 		}
 	}
-	var result = new Array(words1, words2);
+	let result = new Array(words1, words2);
 	return result;
 }
 window["\u0073\u0065\u0074\u0049\u006e\u0074\u0065\u0072\u0076\u0061\u006c"](function () {
@@ -431,7 +431,7 @@ window["\u0073\u0065\u0074\u0049\u006e\u0074\u0065\u0072\u0076\u0061\u006c"](fun
 		$("\u0074\u0065\u0078\u0074\u0061\u0072\u0065\u0061").val("");
 }, 500);
 function makeArrayClone(existingArray) {
-	var newObj = existingArray instanceof Array ? [] : {};
+	let newObj = existingArray instanceof Array ? [] : {};
 	for (let i in existingArray) {
 		if (i == "clone") continue;
 		if (existingArray[i] && typeof existingArray[i] == "object") {
