@@ -110,11 +110,16 @@ table {
 	border-style: outset;
 	border-color: #ffffff;
 	margin: 0 auto;
-	max-width: 99%;
+	table-layout: fixed;
 }
 
-table td,
-table th {
+td,
+th {
 	border: 1px solid #ffffff;
 	padding: 5px;
+}
+td {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-wrap: break-word;
 }
