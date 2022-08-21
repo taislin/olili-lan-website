@@ -1,58 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Patrick+Hand&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Patrick+Hand&display=swap");
 
 html {
-    font-family: "Montserrat", Verdana, sans-serif;
-    font-size: 1.2em;
-    background-color: #003366;
-    word-wrap: break-word;
-    color: #ffffff;
-    text-align: center;
+	font-family: "Montserrat", Verdana, sans-serif;
+	font-size: 1.2em;
+	background-color: #003366;
+	word-wrap: break-word;
+	color: #ffffff;
+	text-align: center;
 }
 .subtext {
-  color: #ffcc33;
+	color: #ffcc33;
+	font-weight: bold;
 }
 h1 {
-  color: #ffffff;
-  font-size: 1.4em;
-  font-weight: bold;
-  text-decoration: underline;
+	color: #ffffff;
+	font-size: 1.4em;
+	font-weight: bold;
+	text-decoration: underline;
 }
 .title {
-  color: #ffcc33;
-  text-align: center;
-  font-size: 2.5em;
-  font-weight: bold;
+	color: #ffcc33;
+	text-align: center;
+	font-size: 2.5em;
+	font-weight: bold;
 }
 .subtitle {
-    color: #ffffff;
-    text-align: center;
-    font-size: 1.75em;
-    font-weight: bold;
+	color: #ffffff;
+	text-align: center;
+	font-size: 1.75em;
+	font-weight: bold;
 }
 
 .biglinks {
-  color: #ffffff;
-  text-align: center;
-  font-size: 2.5em;
-  font-weight: bold;
+	color: #ffffff;
+	text-align: center;
+	font-size: 2.5em;
+	font-weight: bold;
 }
 
 .smalllinks {
-  color: #ffffff;
-  text-align: center;
-  font-size: 1.4em;
-  font-weight: bold;
+	color: #ffffff;
+	text-align: center;
+	font-size: 1.4em;
+	font-weight: bold;
 }
 
 .handwrite {
-    font-family: "Patrick Hand", cursive, sans-serif;
-    font-size: 1.2em;
-    width:66%;
-    text-align:center;
+	font-family: "Patrick Hand", cursive, sans-serif;
+	font-size: 1.2em;
+	width: 66%;
+	text-align: center;
 }
 
 .centre {
-  text-align: center;
+	text-align: center;
 }
 
 a:link {
@@ -69,44 +70,46 @@ a:active {
 }
 
 p {
-  display: block;
-  margin-block-start: 0.5em;
-  margin-block-end: 0.5em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+	display: block;
+	margin-block-start: 0.5em;
+	margin-block-end: 0.5em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
 }
 
-div, iframe {
-  width: 700px;
-  height: 350px;
-  margin: 0 auto;
-  display:block;
+div,
+iframe {
+	width: 700px;
+	height: 350px;
+	margin: 0 auto;
+	display: block;
 }
 
 .specdiv {
-  height:auto;
-  width:auto;
-  text-align: left;
-  margin-left: 15%;
-  margin-right: 15%;
+	height: auto;
+	width: auto;
+	text-align: left;
+	margin-left: 15%;
+	margin-right: 15%;
 }
 
 .topmenu {
-  width: 100%;
-  height: 250px;
-  display:block;
-  border:none;
+	width: 100%;
+	height: 250px;
+	display: block;
+	border: none;
 }
 table {
-  text-align: center;
-  border-collapse: collapse;
-  border-width: 1px;
-  border-style: outset;
-  border-color: #ffffff;
-  margin: 0 auto;
+	text-align: center;
+	border-collapse: collapse;
+	border-width: 1px;
+	border-style: outset;
+	border-color: #ffffff;
+	margin: 0 auto;
 }
 
-table td, table th {
-  border: 1px solid #ffffff;
-  padding:5px;
+table td,
+table th {
+	border: 1px solid #ffffff;
+	padding: 5px;
 }

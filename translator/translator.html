@@ -63,27 +63,26 @@
 			<div style="clear: both"></div>
 		</div>
 		<script>
-			phrases1 = [],
-			phrases2 = [],
-			words1 = [],
-			words2 = [],
-			suffixes1 = [],
-			suffixes2 = [],
-			intraword1 = [],
-			intraword2 = [],
-			prefixes1 = [],
-			prefixes2 = [],
-			regex1 = [],
-			regex2 = [],
-			rev_regex1 = [],
-			rev_regex2 = [],
-			ordering1 = [],
-			ordering2 = [],
-
-			$.get("./langdata/words.csv", function (data) {
-				[words1, words2] = parseCSV(data);
-				evenUpSizes(words1, words2);
-			});
+			(phrases1 = []),
+				(phrases2 = []),
+				(words1 = []),
+				(words2 = []),
+				(suffixes1 = []),
+				(suffixes2 = []),
+				(intraword1 = []),
+				(intraword2 = []),
+				(prefixes1 = []),
+				(prefixes2 = []),
+				(regex1 = []),
+				(regex2 = []),
+				(rev_regex1 = []),
+				(rev_regex2 = []),
+				(ordering1 = []),
+				(ordering2 = []),
+				$.get("./langdata/words.csv", function (data) {
+					[words1, words2] = parseCSV(data);
+					evenUpSizes(words1, words2);
+				});
 			$.get("./langdata/phrases.csv", function (data) {
 				[phrases1, phrases2] = parseCSV(data);
 				evenUpSizes(phrases1, phrases2);
@@ -101,7 +100,6 @@
 				evenUpSizes(suffixes1, suffixes2);
 			});
 
-
 			//fix for mysql trailing newline deletion problem
 			function evenUpSizes(a, b) {
 				if (a.length > b.length) {
@@ -114,16 +112,16 @@
 				// By lines
 				var array1 = [];
 				var array2 = [];
-				var tempdata = data.replace("\r","")
+				var tempdata = data.replace("\r", "");
 				var lines = tempdata.split("\n");
 				for (var line = 0; line < lines.length; line++) {
 					var columns = lines[line].split(";");
 					for (var column = 0; column < columns.length; column++) {
 						if (column == 0) {
-							array1.push(columns[0].replace('\"','').replace('\"','').replace("\r",""));
+							array1.push(columns[0].replace('"', "").replace('"', "").replace("\r", ""));
 						}
 						if (column == 1) {
-							array2.push(columns[1].replace('\"','').replace('\"','').replace("\r",""));
+							array2.push(columns[1].replace('"', "").replace('"', "").replace("\r", ""));
 						}
 					}
 				}

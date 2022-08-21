@@ -371,7 +371,6 @@ function getRelativeOrder(truth, jumbled) {
 	for (let i of jumbled) {
 		if (truth.indexOf(jumbled[i]) !== -1) {
 			order.push(truth.indexOf(jumbled[i]) + 1);
-		} else {
 		}
 	}
 	return order.join(",");
@@ -396,7 +395,7 @@ function handleDuplicates(words1, words2) {
 		let findDupsOf = words1[i];
 		let dupArray = new Array();
 		let foundDups = false;
-		if (!(findDupsOf.substring(0, "{{*DUPLICATE MARKER*}}".length) == "{{*DUPLICATE MARKER*}}")) {
+		if (findDupsOf.substring(0, "{{*DUPLICATE MARKER*}}".length) !== "{{*DUPLICATE MARKER*}}") {
 			for (let j = 0; j < words1InitialLength; j++) {
 				if (findDupsOf == words1[j] && i != j) {
 					dupArray.push(words2[j]);
