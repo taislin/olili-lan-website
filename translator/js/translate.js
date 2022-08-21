@@ -1,19 +1,3 @@
-var phrases1 = new Array();
-var phrases2 = new Array();
-var words1 = new Array();
-var words2 = new Array();
-var intraword1 = new Array();
-var intraword2 = new Array();
-var prefixes1 = new Array();
-var prefixes2 = new Array();
-var suffixes1 = new Array();
-var suffixes2 = new Array();
-var regex1 = new Array();
-var regex2 = new Array();
-var rev_regex1 = new Array();
-var rev_regex2 = new Array();
-var ordering1 = new Array();
-var ordering2 = new Array();
 function numRules() {
 	return (
 		phrases1.length +

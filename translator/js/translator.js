@@ -17,9 +17,4 @@ $(document).ready(function () {
 			$("#english-text").val(english);
 		}, 200);
 	});
-	$(".translate-container .english").keypress(function (e) {
-		if (e.which == 32) {
-			var text = $("#english-text").val();
-		}
-	});
 });
