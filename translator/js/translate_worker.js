@@ -10,22 +10,22 @@ self.addEventListener(
 	},
 	false
 );
-var phrases1;
-var phrases2;
-var words1;
-var words2;
-var intraword1;
-var intraword2;
-var prefixes1;
-var prefixes2;
-var suffixes1;
-var suffixes2;
-var regex1;
-var regex2;
-var rev_regex1;
-var rev_regex2;
-var ordering1;
-var ordering2;
+let phrases1;
+let phrases2;
+let words1;
+let words2;
+let intraword1;
+let intraword2;
+let prefixes1;
+let prefixes2;
+let suffixes1;
+let suffixes2;
+let regex1;
+let regex2;
+let rev_regex1;
+let rev_regex2;
+let ordering1;
+let ordering2;
 function initData(data) {
 	phrases1 = data.phrases1;
 	phrases2 = data.phrases2;
