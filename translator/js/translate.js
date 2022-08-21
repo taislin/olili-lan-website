@@ -231,7 +231,7 @@ function phraseSwap(phrases1, phrases2, text) {
 		phrases2[i] = tokenate(phrases2[i]);
 	}
 	for (let i of phrases1) {
-		for (let j = 0; j < wordSeps.length; j++) {
+		for (let j of wordSeps) {
 			if (phrases2[i] !== "")
 				text = text.split(" " + phrases1[i].toLowerCase() + wordSeps[j]).join(" " + phrases2[i] + wordSeps[j]);
 			else text = text.split(" " + phrases1[i].toLowerCase() + wordSeps[j]).join(" ");
@@ -250,7 +250,7 @@ function wordSwap(words1, words2, text) {
 	for (let i of words1) {
 		if (words1[i] instanceof Array) {
 			words1_notags[i] = [];
-			for (let j = 0; j < words1[i].length; j++) {
+			for (let j of words1[i]) {
 				words1_notags[i][j] = words1[i][j].replace(/\{\{.*\}\}/g, "");
 			}
 		} else {
@@ -260,14 +260,13 @@ function wordSwap(words1, words2, text) {
 	for (let i of words1_notags) {
 		let swapWithThis = null;
 		if (words2[i] instanceof Array) {
-			let l = words2[i].length;
 			swapWithThis = words2[i][Math.floor(Math.random() * words2[i].length)];
 		} else {
 			swapWithThis = words2[i];
 		}
-		for (let j = 0; j < wordSeps.length; j++) {
+		for (let j of wordSeps) {
 			if (words1_notags[i] instanceof Array) {
-				for (let k = 0; k < words1_notags[i].length; k++) {
+				for (let k of words1_notags[i]) {
 					if (swapWithThis.length > 0)
 						text = text
 							.split(" " + words1_notags[i][k].toLowerCase() + wordSeps[j])
@@ -280,9 +279,11 @@ function wordSwap(words1, words2, text) {
 					words1_notags[i][0] + words1_notags[i].slice(-1) == '""'
 				) {
 					text = text.split(words1_notags[i].toLowerCase() + wordSeps[j]).join(swapWithThis + wordSeps[j]);
-				} else if (swapWithThis.length > 0)
+				} else if (swapWithThis.length > 0) {
 					text = text.split(" " + words1_notags[i].toLowerCase() + wordSeps[j]).join(" " + swapWithThis + wordSeps[j]);
-				else text = text.split(" " + words1[i].toLowerCase() + wordSeps[j]).join(" ");
+				} else {
+					text = text.split(" " + words1[i].toLowerCase() + wordSeps[j]).join(" ");
+				}
 			}
 		}
 	}
@@ -356,7 +357,7 @@ function wordOrdering(ordering1, ordering2, text) {
 	let alreadyRemovedTags = [];
 	for (let i of ordering1) {
 		let tags = ordering1[i].trim().replace(/\s+/g, " ").split(" ");
-		for (let j = 0; j < tags.length; j++) {
+		for (let j of tags) {
 			if (alreadyRemovedTags.indexOf(tags[j]) === -1) {
 				text = text.replace("{{" + tags[j] + "}}", "");
 				alreadyRemovedTags.push(tags[j]);
@@ -391,7 +392,7 @@ function tokenate(s) {
 }
 function handleDuplicates(words1, words2) {
 	let words1InitialLength = words1.length;
-	for (let i of words1InitialLength) {
+	for (let i = 0; i < words1InitialLength; i++) {
 		let findDupsOf = words1[i];
 		let dupArray = new Array();
 		let foundDups = false;
