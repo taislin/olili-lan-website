@@ -106,7 +106,7 @@ function translate(text, direction) {
 			text = text.split(" 985865568NEWLINETOKEN98758659 ").join("\n");
 			text = text.split(" 985865568NEWLINETOKEN98758659").join("\n");
 			text = text.split("985865568NEWLINETOKEN98758659").join("\n");
-			text = text.replace(/(\b\S+\b)[ ]+\b\1\b/gi, "$1 $1");
+			text = text.replace(/(\b\S+\b) +\b\1\b/gi, "$1 $1");
 			if (firstLetterIsCapital) {
 				text = text[0].toUpperCase() + text.substr(1);
 			}
@@ -158,7 +158,6 @@ function translateWithWebWorker(text, direction) {
 		if (waitingForTypingToFinish) clearTimeout(waitingForTypingToFinish);
 		waitingForTypingToFinish = setTimeout(function () {
 			translationInProgress = true;
-			let waitingForType = false;
 			worker.postMessage({ text: text, direction: direction });
 		}, 350);
 	} else {
@@ -259,11 +258,12 @@ function wordSwap(words1, words2, text) {
 		}
 	}
 	for (let i = 0; i < words1_notags.length; i++) {
+		let swapWithThis = null;
 		if (words2[i] instanceof Array) {
 			let l = words2[i].length;
-			let swapWithThis = words2[i][Math.floor(Math.random() * words2[i].length)];
+			swapWithThis = words2[i][Math.floor(Math.random() * words2[i].length)];
 		} else {
-			let swapWithThis = words2[i];
+			swapWithThis = words2[i];
 		}
 		for (let j = 0; j < wordSeps.length; j++) {
 			if (words1_notags[i] instanceof Array) {
@@ -344,18 +344,18 @@ function regexReplace(regex1, regex2, text) {
 function wordOrdering(ordering1, ordering2, text) {
 	for (let i = 0; i < ordering1.length; i++) {
 		let regex = new RegExp(
-			"([^\\s]+){{" + ordering1[i].trim().replace(/[\s]+/g, " ").split(" ").join("}}[\\s]+([^\\s]+){{") + "}}",
+			"([^\\s]+){{" + ordering1[i].trim().replace(/\s+/g, " ").split(" ").join("}}[\\s]+([^\\s]+){{") + "}}",
 			"g"
 		);
 		let orderString = getRelativeOrder(
-			ordering1[i].replace(/[\s]+/g, " ").split(" "),
-			ordering2[i].replace(/[\s]+/g, " ").split(" ")
+			ordering1[i].replace(/\s+/g, " ").split(" "),
+			ordering2[i].replace(/\s+/g, " ").split(" ")
 		);
 		text = text.replace(regex, "$" + orderString.split(",").join(" $"));
 	}
 	let alreadyRemovedTags = [];
 	for (let i = 0; i < ordering1.length; i++) {
-		let tags = ordering1[i].trim().replace(/[\s]+/g, " ").split(" ");
+		let tags = ordering1[i].trim().replace(/\s+/g, " ").split(" ");
 		for (let j = 0; j < tags.length; j++) {
 			if (alreadyRemovedTags.indexOf(tags[j]) === -1) {
 				text = text.replace("{{" + tags[j] + "}}", "");
