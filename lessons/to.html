@@ -6,6 +6,7 @@
 		<meta charset="utf-8" />
 		<meta content="width=device-width, initial-scale=1" name="viewport" />
 		<link rel="stylesheet" href="./../style.css" />
+		<script src="./hide_display.js"></script>
 		<meta name="description" content="The official olili-lan website." />
 		<meta name="author" content="olili-lan foundation" />
 
@@ -22,14 +23,14 @@
 		<hr />
 		<br />
 		<img src="asitele/akala.png" alt="akala" /><img src="asitele/akala.png" alt="akala" />
-		<p class="subtext" size="4"><u>te</u> akala</p>
+		<p class="subtext"><u>te</u> akala</p>
 		<p class="centre"><u>two</u> fish</p>
 		<br />
 		<img src="asitele/ako.png" alt="ako" /><img src="asitele/ako.png" alt="ako" /><img
 			src="asitele/ako.png"
 			alt="ako"
 		/>
-		<p class="subtext" size="4"><u>ti</u> ako</p>
+		<p class="subtext"><u>ti</u> ako</p>
 		<p class="centre"><u>three</u> men</p>
 		<br />
 		<hr />
@@ -100,13 +101,11 @@
 		<p class="subtitle">but!</p>
 		<br />
 		<img src="asitele/atono.png" alt="atono" /><img src="asitele/tatono.png" alt="tatono" />
-		<p class="subtext" size="4">atono&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>t</u>atono</p>
+		<p class="subtext">atono&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>t</u>atono</p>
 		<br />
 
 		<img src="asitele/ako.png" alt="ako" /><img src="asitele/tako.png" alt="tako" />
-		<p class="subtext" size="4">
-			ako&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>t</u>ako
-		</p>
+		<p class="subtext">ako&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>t</u>ako</p>
 		<br />
 		<hr />
 		<br />
@@ -170,51 +169,27 @@
 
 		<h1>Reading</h1>
 		<p>Translate the following phrases:</p>
-		<button
-			title="Click to show/hide content"
-			type="button"
-			onclick="if(document.getElementById('spoiler1') .style.display=='none') {document.getElementById('spoiler1') .style.display=''}else{document.getElementById('spoiler1') .style.display='none'}"
-		>
-			Show/hide answer
-		</button>
-		<p class="subtext" size="3">1. te-kili-ti-tako-tatono</p>
+		<button title="Click to show/hide content" type="button" onclick="hide_display(1)">Show/hide answer</button>
+		<p class="subtext-3">1. te-kili-ti-tako-tatono</p>
 		<input class="handwrite" type="text" />
-		<p id="spoiler1" style="display: none" size="3">Two hundred and sixty-five (265)</p>
+		<p id="spoiler1" class="spoiler">Two hundred and sixty-five (265)</p>
 		<br /><br />
-		<button
-			title="Click to show/hide content"
-			type="button"
-			onclick="if(document.getElementById('spoiler4') .style.display=='none') {document.getElementById('spoiler4') .style.display=''}else{document.getElementById('spoiler4') .style.display='none'}"
-		>
-			Show/hide answer
-		</button>
-		<p class="subtext" size="3">2. kili-mili-ti-kili-to-tako-ta</p>
+		<button title="Click to show/hide content" type="button" onclick="hide_display(4)">Show/hide answer</button>
+		<p class="subtext-3">2. kili-mili-ti-kili-to-tako-ta</p>
 		<input class="handwrite" type="text" />
-		<p id="spoiler4" style="display: none" size="3">One hundred thousand, three hundred and eighty-one (100,381)</p>
+		<p id="spoiler4" class="spoiler">One hundred thousand, three hundred and eighty-one (100,381)</p>
 		<br /><br />
 		<h1>Writing</h1>
 		<p>Translate the following phrases:</p>
-		<button
-			title="Click to show/hide content"
-			type="button"
-			onclick="if(document.getElementById('spoiler2') .style.display=='none') {document.getElementById('spoiler2') .style.display=''}else{document.getElementById('spoiler2') .style.display='none'}"
-		>
-			Show/hide answer
-		</button>
-		<p class="subtext" size="3">1. Nine hundred and thirty-two (932)</p>
+		<button title="Click to show/hide content" type="button" onclick="hide_display(2)">Show/hide answer</button>
+		<p class="subtext-3">1. Nine hundred and thirty-two (932)</p>
 		<input class="handwrite" type="text" />
-		<p id="spoiler2" style="display: none" size="3">tatono-to-kili-tako-te-tatono-te</p>
+		<p id="spoiler2" class="spoiler">tatono-to-kili-tako-te-tatono-te</p>
 		<br /><br />
-		<button
-			title="Click to show/hide content"
-			type="button"
-			onclick="if(document.getElementById('spoiler3') .style.display=='none') {document.getElementById('spoiler3') .style.display=''}else{document.getElementById('spoiler3') .style.display='none'}"
-		>
-			Show/hide answer
-		</button>
-		<p class="subtext" size="3">Six thousand and ninety-nine (6,099)</p>
+		<button title="Click to show/hide content" type="button" onclick="hide_display(3)">Show/hide answer</button>
+		<p class="subtext-3">Six thousand and ninety-nine (6,099)</p>
 		<input class="handwrite" type="text" />
-		<p id="spoiler3" style="display: none" size="3">tatono-ta-mili-to-tako-ti-tatono-to</p>
+		<p id="spoiler3" class="spoiler">tatono-ta-mili-to-tako-ti-tatono-to</p>
 		<br /><br />
 
 		<hr />

@@ -2,10 +2,10 @@
 <html lang="en">
 	<head>
 		<title>1: epana lan asona, ta</title>
-
 		<meta charset="utf-8" />
 		<meta content="width=device-width, initial-scale=1" name="viewport" />
 		<link rel="stylesheet" href="./../style.css" />
+		<script src="./hide_display.js"></script>
 		<meta name="description" content="The official olili-lan website." />
 		<meta name="author" content="olili-lan foundation" />
 
@@ -71,24 +71,24 @@
 		<br />
 
 		<img src="asitele/akali.png" alt="akali" />
-		<p class="subtext" size="4">akali</p>
+		<p class="subtext">akali</p>
 		<p class="centre">bird</p>
 		<br />
 		<img src="asitele/akali.png" alt="akali" /><img src="asitele/akali.png" alt="akali" /><img
 			src="asitele/akali.png"
 			alt="akali"
 		/>
-		<p class="subtext" size="4"><br />akali-<u>s</u></p>
+		<p class="subtext"><br />akali-<u>s</u></p>
 		<p class="centre">bird<u>s</u> (plural)</p>
 		<br />
 		<hr />
 		<br />
 		<img src="asitele/kakaakali.png" alt="kaka-akali" />
-		<p class="subtext" size="4"><u>kaka</u>-akali</p>
+		<p class="subtext"><u>kaka</u>-akali</p>
 		<p class="centre"><u>female</u> bird</p>
 		<br />
 		<img src="asitele/kokoakali.png" alt="koko-akali" />
-		<p class="subtext" size="4"><u>koko</u>-akali</p>
+		<p class="subtext"><u>koko</u>-akali</p>
 		<p class="centre"><u>male</u> bird</p>
 		<br />
 		<hr />
@@ -97,7 +97,7 @@
 			src="asitele/kokoakali.png"
 			alt="koko-akali"
 		/>
-		<p class="subtext" size="4"><u>koko</u>-akali-<u>s</u></p>
+		<p class="subtext"><u>koko</u>-akali-<u>s</u></p>
 		<p class="centre"><u>male</u> bird<u>s</u></p>
 		<hr />
 		<br />
@@ -130,27 +130,15 @@
 		<h1>Reading</h1>
 		<p>Translate the following phrases:</p>
 
-		<p class="subtext" size="3">1. kaka-akali</p>
+		<p class="subtext-3">1. kaka-akali</p>
 		<input class="handwrite" type="text" /><br />
-		<button
-			title="Click to show/hide content"
-			type="button"
-			onclick="if(document.getElementById('spoiler1') .style.display=='none') {document.getElementById('spoiler1') .style.display=''}else{document.getElementById('spoiler1') .style.display='none'}"
-		>
-			Show/hide answer
-		</button>
-		<p id="spoiler1" style="display: none" size="3">Female Bird</p>
+		<button title="Click to show/hide content" type="button" onclick="hide_display(1)">Show/hide answer</button>
+		<p id="spoiler1" class="spoiler">Female Bird</p>
 		<br /><br />
-		<p class="subtext" size="3">2. koko-akali-s</p>
+		<p class="subtext-3">2. koko-akali-s</p>
 		<input class="handwrite" type="text" /><br />
-		<button
-			title="Click to show/hide content"
-			type="button"
-			onclick="if(document.getElementById('spoiler2') .style.display=='none') {document.getElementById('spoiler2') .style.display=''}else{document.getElementById('spoiler2') .style.display='none'}"
-		>
-			Show/hide answer
-		</button>
-		<p id="spoiler2" style="display: none" size="3">Male Birds</p>
+		<button title="Click to show/hide content" type="button" onclick="hide_display(2)">Show/hide answer</button>
+		<p id="spoiler2" class="spoiler">Male Birds</p>
 
 		<hr />
 		<br />

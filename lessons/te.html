@@ -6,6 +6,7 @@
 		<meta charset="utf-8" />
 		<meta content="width=device-width, initial-scale=1" name="viewport" />
 		<link rel="stylesheet" href="./../style.css" />
+		<script src="./hide_display.js"></script>
 		<meta name="description" content="The official olili-lan website." />
 		<meta name="author" content="olili-lan foundation" />
 
@@ -23,28 +24,28 @@
 		<br />
 
 		<img src="asitele/anena.png" alt="anena" />
-		<p class="subtext" size="4">anena</p>
+		<p class="subtext">anena</p>
 		<p class="centre">mountain</p>
 		<br />
 		<img src="asitele/akali.png" alt="akali" /><img src="asitele/etava.png" alt="etava" /><img
 			src="asitele/anena.png"
 			alt="anena"
 		/>
-		<p class="subtext" size="4"><br />akali&nbsp<u>etava</u>&nbspanena</p>
+		<p class="subtext"><br />akali&nbsp<u>etava</u>&nbspanena</p>
 		<p class="centre">[the] bird <u>goes</u> [to the] mountain</p>
 		<br />
 		<hr />
 		<br />
 		<img src="asitele/ako.png" alt="ako" />
-		<p class="subtext" size="4">ako</p>
+		<p class="subtext">ako</p>
 		<p class="centre">person</p>
 		<br />
 		<img src="asitele/ako.png" alt="ako" /><img src="asitele/etoki.png" alt="etoki" />
-		<p class="subtext" size="4">ako&nbsp<u>etoki</u></p>
+		<p class="subtext">ako&nbsp<u>etoki</u></p>
 		<p class="centre">person <u>speaks/says</u></p>
 		<br />
 		<img src="asitele/ako.png" alt="ako" /><img src="asitele/etoki/etoki_aen.png" alt="etoki: akali etava anena" />
-		<p class="subtext" size="4">ako&nbsp<u>etoki</u>:&nbsp"akali etava anena"</p>
+		<p class="subtext">ako&nbsp<u>etoki</u>:&nbsp"akali etava anena"</p>
 		<p class="centre">person <u>says</u>: "the bird goes to the mountain"</p>
 		<br />
 		<hr />
@@ -53,14 +54,14 @@
 			src="asitele/kakaako.png"
 			alt="kaka-ako"
 		/>
-		<p class="subtext" size="4">koko-ako etoki&nbsp<u>poka</u>&nbspkaka-ako</p>
+		<p class="subtext">koko-ako etoki&nbsp<u>poka</u>&nbspkaka-ako</p>
 		<p class="centre">[the] man speaks <u>with</u> [the] woman</p>
 		<br />
 		<img src="asitele/kokoako.png" alt="koko-ako" /><img src="asitele/kakaako.png" alt="kaka-ako" />&nbsp<img
 			src="asitele/etava.png"
 			alt="etava"
 		/>&nbsp<img src="asitele/anena.png" alt="anena" />
-		<p class="subtext" size="4">koko-ako&nbsp<u>vo</u>&nbspkaka-ako etava anena</p>
+		<p class="subtext">koko-ako&nbsp<u>vo</u>&nbspkaka-ako etava anena</p>
 		<p class="centre">[the] man <u>and</u> [the] woman go [to the] mountain</p>
 		<br />
 
@@ -68,7 +69,7 @@
 			src="asitele/naetava.png"
 			alt="na etava"
 		/>&nbsp<img src="asitele/anena.png" alt="anena" />
-		<p class="subtext" size="4">ako&nbspvo&nbspakali <u>na</u>-etava anena</p>
+		<p class="subtext">ako&nbspvo&nbspakali <u>na</u>-etava anena</p>
 		<p class="centre">[the] man and [the] bird <u>do not</u> go [to the] mountain</p>
 		<br />
 		<hr />
@@ -119,29 +120,17 @@
 
 		<h1>Reading</h1>
 		<p>Translate the following phrase:</p>
-		<p class="subtext" size="3">1. kaka-ako etoki</p>
+		<p class="subtext-3">1. kaka-ako etoki</p>
 		<input class="handwrite" type="text" />
-		<p id="spoiler1" style="display: none" size="3">The woman speaks</p>
-		<br /><button
-			title="Click to show/hide content"
-			type="button"
-			onclick="if(document.getElementById('spoiler1') .style.display=='none') {document.getElementById('spoiler1') .style.display=''}else{document.getElementById('spoiler1') .style.display='none'}"
-		>
-			Show/hide answer
-		</button>
+		<p id="spoiler1" class="spoiler">The woman speaks</p>
+		<br /><button title="Click to show/hide content" type="button" onclick="hide_display(1)">Show/hide answer</button>
 		<br /><br />
 		<h1>Writing</h1>
 		<p>Translate the following phrase:</p>
-		<p class="subtext" size="3">1. The man and the bird go to the mountain</p>
+		<p class="subtext-3">1. The man and the bird go to the mountain</p>
 		<input class="handwrite" type="text" />
-		<p id="spoiler2" style="display: none" size="3">koko-ako vo akali etava anena</p>
-		<br /><button
-			title="Click to show/hide content"
-			type="button"
-			onclick="if(document.getElementById('spoiler2') .style.display=='none') {document.getElementById('spoiler2') .style.display=''}else{document.getElementById('spoiler2') .style.display='none'}"
-		>
-			Show/hide answer
-		</button>
+		<p id="spoiler2" class="spoiler">koko-ako vo akali etava anena</p>
+		<br /><button title="Click to show/hide content" type="button" onclick="hide_display(2)">Show/hide answer</button>
 		<br /><br />
 
 		<hr />

@@ -14,6 +14,11 @@ body {
 	color: #ffcc33;
 	font-weight: bold;
 }
+.subtext-3 {
+	color: #ffcc33;
+	font-weight: bold;
+	font-size: 0.8em;
+}
 h1 {
 	color: #ffffff;
 	font-size: 1.4em;
@@ -58,6 +63,10 @@ h1 {
 	text-align: center;
 }
 
+.spoiler {
+	display: none;
+	font-size: 0.9em;
+}
 .centre {
 	text-align: center;
 }

@@ -333,7 +333,7 @@ function suffixSwap(suffixes1, suffixes2, text) {
 function regexReplace(regex1, regex2, text) {
 	for (let i of regex1) {
 		if (typeof regex2[0] == "string" || regex2[0] instanceof String) {
-			let match = regex1[i].match(new RegExp("^/(.*?)/([gimy]*)$"));
+			let match = regex1[i].match("^/(.*?)/([gimy]*)$");
 			if (match) {
 				let properRegEx = new RegExp(match[1], match[2]);
 				text = text.replace(properRegEx, regex2[i]);
@@ -416,7 +416,6 @@ function handleDuplicates(words1, words2) {
 			if (i == 0) {
 				words1.shift();
 				words2.shift();
-				i--;
 			} else {
 				words1.splice(i, 1);
 				words2.splice(i, 1);
