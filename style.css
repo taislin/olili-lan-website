@@ -92,8 +92,8 @@ a:active {
 
 p {
 	display: block;
-	margin-block-start: 0.5em;
-	margin-block-end: 0.5em;
+	margin-block-start: 15px;
+	margin-block-end: 15px;
 	margin-inline-start: 0px;
 	margin-inline-end: 0px;
 }
