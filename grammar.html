@@ -15,10 +15,31 @@
 		<link rel="icon" type="image/png" href="lessons/asitele/ako.png" />
 	</head>
 	<body>
-		<div class="topmenu">
-			<p class="title">olili-lan learning center</p>
-			<img class="banner" src="lessons/asitele/a.png" alt="banner" />
-			<hr />
+		<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+		<link rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script>/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+	function myFunction() {
+	  var x = document.getElementById("myTopnav");
+	  if (x.className === "topnav") {
+		x.className += " responsive";
+	  } else {
+		x.className = "topnav";
+	  }
+	}</script>
+		<div class="topnav" id="myTopnav">
+			<a href="index.html" style="padding-top: 8px; padding-bottom: 8px;"><img
+					src="lessons/asitele/ako.png"
+					style="height: 32px;"></a>
+			<a href="index.html">Home</a>
+			<a href="grammar.html" class="active">Grammar</a>
+			<a href="wordlist.html">Dictionary</a>
+			<a href="lessons/avaka.html">Lessons</a>
+			<a href="texts.html">Texts</a>
+			<a href="translator.html">Translator</a>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<i class="fa fa-bars"></i>
+			</a>
 		</div>
 		<p class="title">olili-lan grammar</p>
 		<p class="subtitle">3rd Edition, November 2021</p>
@@ -28,13 +49,17 @@
 		<p>Welcome to the world of olili-lan!</p>
 
 		<p>
-			olili-lan is a conlang (constructed language) intended to be a small, minimalist, and easy to learn. It is not
-			meant to be a complex, naturalistic and specific language. It has a reduced dictionary on purpose (less than 200
+			olili-lan is a conlang (constructed language) intended to be a small,
+			minimalist, and easy to learn. It is not
+			meant to be a complex, naturalistic and specific language. It has a reduced
+			dictionary on purpose (less than 200
 			root words), trying to balance simplicity and communication potential.
 		</p>
 		<p>
-			olili-lan is mainly influenced by tokipona and ygyde, with some extra bits of English, Portuguese, South Pacific
-			Pidgins, and Hawaiian. It is also a philosophical and abstract language, styled after the
+			olili-lan is mainly influenced by tokipona and ygyde, with some extra bits of
+			English, Portuguese, South Pacific
+			Pidgins, and Hawaiian. It is also a philosophical and abstract language,
+			styled after the
 			<em>Sapir-Whorf</em> hypothesis.
 		</p>
 
@@ -90,13 +115,17 @@
 		</table>
 
 		<p>
-			"All the consonants are pronounced like any person who speaks a Western Germanic language would expect them to be,
-			so if you are familiar with English or Dutch this should be straightforward for you.
+			"All the consonants are pronounced like any person who speaks a Western
+			Germanic language would expect them to be,
+			so if you are familiar with English or Dutch this should be straightforward
+			for you.
 		</p>
 
-		<p>The s is normally pronounced as /s/ when in the beginning and middle of words, and as /z/ at the end.</p>
+		<p>The s is normally pronounced as /s/ when in the beginning and middle of
+			words, and as /z/ at the end.</p>
 
-		<p>For those who can"t read IPA symbols, the approximate pronunciation in American English is shown below:</p>
+		<p>For those who can"t read IPA symbols, the approximate pronunciation in
+			American English is shown below:</p>
 		<br />
 		<table>
 			<caption>
@@ -184,14 +213,19 @@
 		</table>
 		<br />
 		<p>
-			olili-lan's vowels are quite unlike English ones. Whereas vowels in English are quite arbitrary and can be
-			pronounced tons of different ways depending on the word, olili-lan's vowels are all regular and never change
-			pronunciation. If you"re familiar with Portuguese or Spanish, or certain other languages, especially romance ones,
-			then your work is already cut out for you. The vowels are the same as they are pronounced when isolated in these
+			olili-lan's vowels are quite unlike English ones. Whereas vowels in English
+			are quite arbitrary and can be
+			pronounced tons of different ways depending on the word, olili-lan's vowels
+			are all regular and never change
+			pronunciation. If you"re familiar with Portuguese or Spanish, or certain
+			other languages, especially romance ones,
+			then your work is already cut out for you. The vowels are the same as they
+			are pronounced when isolated in these
 			languages.
 		</p>
 
-		<p>For those who can"t read IPA symbols, the approximate pronunciation in American English is shown below:</p>
+		<p>For those who can"t read IPA symbols, the approximate pronunciation in
+			American English is shown below:</p>
 		<br />
 		<table>
 			<caption>
@@ -228,11 +262,14 @@
 		<hr />
 		<h2 id="2.3">2.3. Writing System</h2>
 		<p>
-			All olili-lan words have no case distinctions, like Arabic, for example. This means that you do not need to use
-			Upper Case letters even in the beginning of phrases. This doesn't mean you can't write it in Upper Case; you can,
+			All olili-lan words have no case distinctions, like Arabic, for example. This
+			means that you do not need to use
+			Upper Case letters even in the beginning of phrases. This doesn't mean you
+			can't write it in Upper Case; you can,
 			but it won"t mean anything.
 		</p>
-		<p>olili-lan consists in the Latin alphabet, albeit using only 12 letters: 8 consonants and 4 vowels.</p>
+		<p>olili-lan consists in the Latin alphabet, albeit using only 12 letters: 8
+			consonants and 4 vowels.</p>
 		<br />
 		<table>
 			<caption>
@@ -279,25 +316,29 @@
 
 		<hr />
 		<h2 id="2.4">2.4. Hyphen</h2>
-		The hyphen (<strong>-</strong>) is used extensively in olili-lan. When you make compound words, the hyphen is needed
-		between morphemes. It is also used for the plural and possessive suffixes, adverbs, negation, male and female
+		The hyphen (<strong>-</strong>) is used extensively in olili-lan. When you
+		make compound words, the hyphen is needed
+		between morphemes. It is also used for the plural and possessive suffixes,
+		adverbs, negation, male and female
 		prefixes, and the foreign words prefix, as explained in detail in section
-		<a href="#3.3"><strong>3.3. Affixes</strong></a
-		>.<br /><br />
+		<a href="#3.3"><strong>3.3. Affixes</strong></a>.<br /><br />
 		<hr />
 		<h2 id="2.5">2.5. Stress</h2>
-		Stress is always in the penult syllable. Below is a phrase in olili-lan, the transcription into IPA characters, the
+		Stress is always in the penult syllable. Below is a phrase in olili-lan, the
+		transcription into IPA characters, the
 		glossed version, and the English translation:<br /><br />
 		<table>
 			<caption>
 				Stress
 			</caption>
 			<tr>
-				<td><strong>koko-ako, lo pi-eko tatono anaka-s, pi-etava avila pepe-aposa.</strong></td>
+				<td><strong>koko-ako, lo pi-eko tatono anaka-s, pi-etava avila
+						pepe-aposa.</strong></td>
 			</tr>
 			<tr>
 				<td>
-					/&#712;k&#596;.k&#596;-ak&#596; | l&#596; pi &#603;k&#596; ta.&#712;t&#596;.n&#596; a.&#712;na.ka z | pi
+					/&#712;k&#596;.k&#596;-ak&#596; | l&#596; pi &#603;k&#596;
+					ta.&#712;t&#596;.n&#596; a.&#712;na.ka z | pi
 					&#603;.&#712;ta.va a.&#712;vi.la p&#603;.p&#603; a.&#712;p&#596;.sa/
 				</td>
 			</tr>
@@ -314,7 +355,8 @@
 		<hr />
 		<h2 id="3.1">3.1. Word Order</h2>
 		<p>
-			Sentences in olili-lan follow the common <strong>Subject-Verb-Object (SVO)</strong> order, like English. Check the
+			Sentences in olili-lan follow the common <strong>Subject-Verb-Object
+				(SVO)</strong> order, like English. Check the
 			example below:
 		</p>
 		<br />
@@ -335,13 +377,16 @@
 		</table>
 		<br />
 		<p>
-			This can also be easily identified by the start of the words: Since most nouns, all adjectives and all verbs have
-			common starting letters, a simple sentence in olili-lan would have the following letters starting the 3 words:
+			This can also be easily identified by the start of the words: Since most
+			nouns, all adjectives and all verbs have
+			common starting letters, a simple sentence in olili-lan would have the
+			following letters starting the 3 words:
 			<strong>i</strong><strong> e a</strong>
 		</p>
 		<hr />
 		<h2 id="3.2">3.2. Tenses</h2>
-		There are three verbal tenses in olili-lan: Past, Future, and Infinitive. For the present, use the infinitive form
+		There are three verbal tenses in olili-lan: Past, Future, and Infinitive. For
+		the present, use the infinitive form
 		of the verb. For the past and the future, you need to use the prefixes
 		<strong>"pi-" for</strong>
 		the past and
@@ -350,9 +395,12 @@
 		<hr />
 		<h2 id="3.3">3.3. Affixes</h2>
 		<p>
-			Olili-lan makes extensive use of prefixes and suffixes. These affixes modify the meaning of the word or words they
-			are hyphenated with. Olili-lan is head final, meaning that the last word is the most important. For example,
-			<strong>avava-apoki</strong>, meaning "car" or "motor vehicle", can be translated literally as "power-vehicle".
+			Olili-lan makes extensive use of prefixes and suffixes. These affixes modify
+			the meaning of the word or words they
+			are hyphenated with. Olili-lan is head final, meaning that the last word is
+			the most important. For example,
+			<strong>avava-apoki</strong>, meaning "car" or "motor vehicle", can be
+			translated literally as "power-vehicle".
 		</p>
 		<h3 id="3.3.1">3.3.1 Prefixes</h3>
 		<table>
@@ -396,8 +444,7 @@
 			also be used isolated, but should be used as a prefix for clarity.
 			<strong>"ken-"</strong>
 			can also be used isolated " see
-			<a href="#3.6"><strong>3.6. Interrogative</strong></a
-			>.
+			<a href="#3.6"><strong>3.6. Interrogative</strong></a>.
 		</p>
 		<h3 id="3.3.2">3.3.2 Suffixes</h3>
 		<table>
@@ -438,10 +485,12 @@
 			</tr>
 		</table>
 		<p>
-			When pluralizing a word (except for pronouns " see <a href="#4.1"><strong>4.1. Pronouns</strong></a
-			>), use <strong>"-s" </strong>when following a vowel and
+			When pluralizing a word (except for pronouns " see <a
+				href="#4.1"><strong>4.1. Pronouns</strong></a>), use <strong>"-s"
+			</strong>when following a vowel and
 			<strong>"-os"</strong>
-			when following a consonant. This can also be done with verbs and adjectives; the result would be difficult to
+			when following a consonant. This can also be done with verbs and adjectives;
+			the result would be difficult to
 			translate to English. See the examples below:
 		</p>
 		<table>
@@ -482,13 +531,15 @@
 			</tr>
 		</table>
 		<p>
-			In this second case, using the plural suffix on the verb turns it into a repeated action:
+			In this second case, using the plural suffix on the verb turns it into a
+			repeated action:
 			<strong>"He/She hunts animals many times"</strong>.
 		</p>
 		<hr />
 		<h2 id="3.4">3.4. Possessive</h2>
 		<p>
-			When indicating possession, you need to use the possessive suffixes on the owner"s. Use <strong>"-v" </strong>when
+			When indicating possession, you need to use the possessive suffixes on the
+			owner"s. Use <strong>"-v" </strong>when
 			following a vowel and
 			<strong>"-iv"</strong>
 			when following a consonant. See the examples below:
@@ -526,12 +577,14 @@
 				<td>PL</td>
 			</tr>
 		</table>
-		<br />The phrase above translates as <strong>"Their tools"</strong>. Note the use of
+		<br />The phrase above translates as <strong>"Their tools"</strong>. Note the
+		use of
 		<strong>"-iv"</strong>
 		following a word ending in consonant.<br />
 		<hr />
 		<h2 id="3.5">3.5. Comparison</h2>
-		To indicate comparatives and superlatives, the respective suffixes must be used.<br />
+		To indicate comparatives and superlatives, the respective suffixes must be
+		used.<br />
 		<table>
 			<caption>
 				example
@@ -548,7 +601,8 @@
 			</tr>
 		</table>
 		<br />
-		<p>The conjunction <strong>"pin"</strong>, meaning "than", is also used in comparisons.</p>
+		<p>The conjunction <strong>"pin"</strong>, meaning "than", is also used in
+			comparisons.</p>
 		<table>
 			<caption>
 				example
@@ -615,7 +669,8 @@
 				<td>person</td>
 			</tr>
 		</table>
-		<br />In this example, the English translation could be <strong>"The man asked the other man"</strong>.<br />
+		<br />In this example, the English translation could be
+		<strong>"The man asked the other man"</strong>.<br />
 		<table>
 			<caption>
 				example
@@ -635,7 +690,8 @@
 				<td>person</td>
 			</tr>
 		</table>
-		<br />However,<strong>"ken"</strong>can also be used as a independent word, meaning can:<br />
+		<br />However,<strong>"ken"</strong>can also be used as a independent word,
+		meaning can:<br />
 		<table style="font-size: 0.8em">
 			<caption>
 				example
@@ -659,7 +715,8 @@
 				<td>home</td>
 			</tr>
 		</table>
-		<br />The phrase above could be translated as <strong>"Can you come to my house?"</strong>.<br />
+		<br />The phrase above could be translated as
+		<strong>"Can you come to my house?"</strong>.<br />
 		<h2>3.7. Negation</h2>
 		The negation word
 		<strong>"na"</strong>
@@ -702,9 +759,11 @@
 			The phrases above translate as
 			<strong>"The person is not big"</strong>
 			and
-			<strong>"No person is this big" respectively</strong>. Be aware that if you used the
+			<strong>"No person is this big" respectively</strong>. Be aware that if you
+			used the
 			<strong>"na"</strong>
-			as prefix on the second phrase, preceding the noun, then it would translate as
+			as prefix on the second phrase, preceding the noun, then it would translate
+			as
 			<strong>"Something that is not a person is this big"</strong>.
 		</p>
 		<hr />
@@ -712,7 +771,8 @@
 		<hr />
 		<h2 id="4.1">4.1. Pronouns</h2>
 		<p>
-			All pronouns start with <strong>i</strong>. Unlike English, and like many other European languages, there is a
+			All pronouns start with <strong>i</strong>. Unlike English, and like many
+			other European languages, there is a
 			difference between you (singular) and you (plural). Check the table below.
 		</p>
 		<table>
@@ -747,14 +807,16 @@
 			</tr>
 		</table>
 		<p>
-			Gender is non-existent unless specified. Should only be specified when needed.&nbsp;The male and female pronouns
-			can be applied to the pronouns: For example, the literal translation of "he" is <strong>koko-ili</strong
-			><strong>.</strong><br />
+			Gender is non-existent unless specified. Should only be specified when
+			needed.&nbsp;The male and female pronouns
+			can be applied to the pronouns: For example, the literal translation of "he"
+			is <strong>koko-ili</strong><strong>.</strong><br />
 		</p>
 
 		<hr />
 		<h2 id="4.2">4.2. Nouns</h2>
-		Nouns in olili-lan mostly start by <strong>a</strong>. Nouns decline indirectly according to gender and number, both
+		Nouns in olili-lan mostly start by <strong>a</strong>. Nouns decline
+		indirectly according to gender and number, both
 		through the use of suffixes.<br />
 		<table>
 			<caption>
@@ -796,8 +858,10 @@
 		<strong>"koko-"</strong>.
 		<hr />
 		<h2 id="4.3">4.3. Verbs</h2>
-		Verbs in olili-lan always start by <strong>e</strong>. There is a "to be" verb in olili-lan, but it is omitted in
-		normal conversation and writing, unless it is relating to another verb. This works in a similar way to other natural
+		Verbs in olili-lan always start by <strong>e</strong>. There is a "to be" verb
+		in olili-lan, but it is omitted in
+		normal conversation and writing, unless it is relating to another verb. This
+		works in a similar way to other natural
 		languages that omit the verb "to be", like Russian.<br />
 		<table>
 			<caption>
@@ -831,7 +895,8 @@
 			</tr>
 		</table>
 		<br />
-		Verbs in olili-lan don't change according to tense, you just need to add a prefix for either future or past. For the
+		Verbs in olili-lan don't change according to tense, you just need to add a
+		prefix for either future or past. For the
 		present, just leave the verb in the normal infinitive.<br />
 		<table>
 			<caption>
@@ -867,9 +932,10 @@
 		<br />
 		<hr />
 		<h2 id="4.4">4.4. Adjectives</h2>
-		Adjectives in olili-lan always start by <strong>a</strong>. For the superlative and comparative forms, suffixes are
-		used. For more details, see section <a href="#3.5"><strong>3.5. Comparison</strong></a
-		>.<br />
+		Adjectives in olili-lan always start by <strong>a</strong>. For the
+		superlative and comparative forms, suffixes are
+		used. For more details, see section <a href="#3.5"><strong>3.5.
+				Comparison</strong></a>.<br />
 		<hr />
 		<h2 id="4.5">4.5. Prepositions</h2>
 		<table>
@@ -912,7 +978,8 @@
 		<br />
 		<hr />
 		<h2 id="4.6">4.6. Colors</h2>
-		<p>Olili-lan has a simple list of six core colors (<strong>akolo</strong><strong>-s</strong>).</p>
+		<p>Olili-lan has a simple list of six core colors
+			(<strong>akolo</strong><strong>-s</strong>).</p>
 		<br />
 		<table>
 			<caption>
@@ -983,10 +1050,14 @@
 		<br /><br />
 		<hr />
 		<h2 id="4.7">4.7. Numbers</h2>
-		Numbers in olili-lan "<strong>nanepa</strong>" are based on the body. The word for five (<strong>tatono</strong>) is
-		similar to the word for hand (<strong>atono</strong>), while the word for twenty, related to the number of fingers
-		in a hand. The word for twenty (<strong>tako</strong>) is similar to the word for person (<strong>ako</strong>),
-		related to the sum of fingers and toes. The list of number-related root words is shown below.<br />
+		Numbers in olili-lan "<strong>nanepa</strong>" are based on the body. The word
+		for five (<strong>tatono</strong>) is
+		similar to the word for hand (<strong>atono</strong>), while the word for
+		twenty, related to the number of fingers
+		in a hand. The word for twenty (<strong>tako</strong>) is similar to the word
+		for person (<strong>ako</strong>),
+		related to the sum of fingers and toes. The list of number-related root words
+		is shown below.<br />
 		<table>
 			<caption>
 				numbers
@@ -1032,7 +1103,8 @@
 				<td>Million</td>
 			</tr>
 		</table>
-		<br />To refer to other numbers, the words above must be used together, always remembering that the last word of a
+		<br />To refer to other numbers, the words above must be used together, always
+		remembering that the last word of a
 		sequence is the most important.
 		<br />
 		<table>
@@ -1110,7 +1182,8 @@
 				<td>West/left</td>
 			</tr>
 		</table>
-		<br />The phrase above could be translated as <strong>"He is at my Left side"</strong>.<br /><br />
+		<br />The phrase above could be translated as
+		<strong>"He is at my Left side"</strong>.<br /><br />
 		<table>
 			<caption>
 				example
@@ -1126,15 +1199,19 @@
 				<td>West/left</td>
 			</tr>
 		</table>
-		<br />In this case, the phrase above could be translated as <strong>"He is in the West"</strong>.<br />
+		<br />In this case, the phrase above could be translated as
+		<strong>"He is in the West"</strong>.<br />
 		<hr />
 		<h2 id="4.9">4.9. Compound Words</h2>
-		Since olili-lan has a small number of root words (less than 200), compound words are necessary to expose more
-		complex concepts. In this case, as mentioned before, hyphens must be used, and the last word is the most important.
+		Since olili-lan has a small number of root words (less than 200), compound
+		words are necessary to expose more
+		complex concepts. In this case, as mentioned before, hyphens must be used, and
+		the last word is the most important.
 		<strong>avava-apoki</strong>, means car (power-vehicle) while
 		<strong>apoki-avava</strong>
 		means the car"s fuel (vehicle-power).
 		<br /><br /><br />
-		<p class="centre"><a class="biglinks" href="index.html">&lt;=== Main Page</a></p>
+		<p class="centre"><a class="biglinks" href="index.html">&lt;=== Main
+				Page</a></p>
 	</body>
 </html>
