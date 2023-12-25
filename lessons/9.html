@@ -17,6 +17,33 @@
 		<link rel="icon" type="image/png" href="asitele/ako.png" />
 	</head>
 	<body>
+		<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+		<link rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script>/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+	function myFunction() {
+	  var x = document.getElementById("myTopnav");
+	  if (x.className === "topnav") {
+		x.className += " responsive";
+	  } else {
+		x.className = "topnav";
+	  }
+	}</script>
+		<div class="topnav" id="myTopnav">
+			<a href="../index.html"
+				style="padding-top: 1px; padding-bottom: 1px; padding-right:8px;padding-left:8px;"><img
+					src="asitele/lan-asipine.png"
+					style="height: 50px;"></a>
+			<a href="../index.html">Home</a>
+			<a href="../grammar.html">Grammar</a>
+			<a href="../wordlist.html">Dictionary</a>
+			<a href="../lessons/avaka.html" class="active">Lessons</a>
+			<a href="../texts.html">Texts</a>
+			<a href="../translator.html">Translator</a>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<i class="fa fa-bars"></i>
+			</a>
+		</div>
 		<p class="title">epana lan asona, tatono-to (9)</p>
 		<p class="subtitle">Comparative, Superlative</p>
 		<hr />
@@ -88,24 +115,28 @@
 
 		<h1>Reading</h1>
 		<p>Translate the following phrases:</p>
-		<button title="Click to show/hide content" type="button" onclick="hide_display(1)">Show/hide answer</button>
+		<button title="Click to show/hide content" type="button"
+			onclick="hide_display(1)">Show/hide answer</button>
 		<p class="subtext-3">1. i-v avila osino-lom pin ilip-iv avila</p>
 		<input class="handwrite" type="text" />
 		<p id="spoiler1" class="spoiler">My house is newer than his house.</p>
 		<br /><br />
-		<button title="Click to show/hide content" type="button" onclick="hide_display(4)">Show/hide answer</button>
+		<button title="Click to show/hide content" type="button"
+			onclick="hide_display(4)">Show/hide answer</button>
 		<p class="subtext-4">2. i evile lito pin ili</p>
 		<input class="handwrite" type="text" />
 		<p id="spoiler4" class="spoiler">I want more than him.</p>
 		<br /><br />
 		<h1>Writing</h1>
 		<p>Translate the following phrases:</p>
-		<button title="Click to show/hide content" type="button" onclick="hide_display(2)">Show/hide answer</button>
+		<button title="Click to show/hide content" type="button"
+			onclick="hide_display(2)">Show/hide answer</button>
 		<p class="subtext-3">1. Six birds are equal to 3 fishes.</p>
 		<input class="handwrite" type="text" />
 		<p id="spoiler2" class="spoiler">tatano-ta akali-s osama ti akala-s</p>
 		<br /><br />
-		<button title="Click to show/hide content" type="button" onclick="hide_display(3)">Show/hide answer</button>
+		<button title="Click to show/hide content" type="button"
+			onclick="hide_display(3)">Show/hide answer</button>
 		<p class="subtext-3">2. What is this?</p>
 		<input class="handwrite" type="text" />
 		<p id="spoiler3" class="spoiler">seme lo?</p>
@@ -113,10 +144,9 @@
 
 		<hr />
 		<br />
-		<strong
-			><p size="5">
-				<a href="8.html">&lt;===</a>&nbsp; &nbsp;<a href="avaka.html">HOME</a>&nbsp; &nbsp;<a href="10.html">===&gt;</a>
-			</p></strong
-		><br />
+		<strong><p size="5">
+				<a href="8.html">&lt;===</a>&nbsp; &nbsp;<a href="avaka.html">HOME</a>&nbsp;
+				&nbsp;<a href="10.html">===&gt;</a>
+			</p></strong><br />
 	</body>
 </html>

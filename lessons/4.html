@@ -17,18 +17,46 @@
 		<link rel="icon" type="image/png" href="asitele/ako.png" />
 	</head>
 	<body>
+		<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+		<link rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script>/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+	function myFunction() {
+	  var x = document.getElementById("myTopnav");
+	  if (x.className === "topnav") {
+		x.className += " responsive";
+	  } else {
+		x.className = "topnav";
+	  }
+	}</script>
+		<div class="topnav" id="myTopnav">
+			<a href="../index.html"
+				style="padding-top: 1px; padding-bottom: 1px; padding-right:8px;padding-left:8px;"><img
+					src="asitele/lan-asipine.png"
+					style="height: 50px;"></a>
+			<a href="../index.html">Home</a>
+			<a href="../grammar.html">Grammar</a>
+			<a href="../wordlist.html">Dictionary</a>
+			<a href="../lessons/avaka.html" class="active">Lessons</a>
+			<a href="../texts.html">Texts</a>
+			<a href="../translator.html">Translator</a>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<i class="fa fa-bars"></i>
+			</a>
+		</div>
 		<p class="title">epana lan asona, to (4)</p>
 		<p class="subtitle">Numbers</p>
 		<hr />
 		<br />
-		<img src="asitele/akala.png" alt="akala" /><img src="asitele/akala.png" alt="akala" />
+		<img src="asitele/akala.png" alt="akala" /><img src="asitele/akala.png"
+			alt="akala" />
 		<p class="subtext"><u>te</u> akala</p>
 		<p class="centre"><u>two</u> fish</p>
 		<br />
-		<img src="asitele/ako.png" alt="ako" /><img src="asitele/ako.png" alt="ako" /><img
+		<img src="asitele/ako.png" alt="ako" /><img src="asitele/ako.png"
+			alt="ako" /><img
 			src="asitele/ako.png"
-			alt="ako"
-		/>
+			alt="ako" />
 		<p class="subtext"><u>ti</u> ako</p>
 		<p class="centre"><u>three</u> men</p>
 		<br />
@@ -38,16 +66,12 @@
 			<tbody>
 				<tr>
 					<td>
-						<strong
-							><p class="subtext">nanepa-s<br /></p>
-							<p>numbers</p></strong
-						>
+						<strong><p class="subtext">nanepa-s<br /></p>
+							<p>numbers</p></strong>
 					</td>
 					<td>
-						<strong
-							><p class="subtext">esitele<br /></p>
-							<p>written</p></strong
-						>
+						<strong><p class="subtext">esitele<br /></p>
+							<p>written</p></strong>
 					</td>
 				</tr>
 				<tr>
@@ -99,12 +123,16 @@
 		<p class="subtext subtitle">taso!</p>
 		<p class="subtitle">but!</p>
 		<br />
-		<img src="asitele/atono.png" alt="atono" /><img src="asitele/tatono.png" alt="tatono" />
-		<p class="subtext">atono&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>t</u>atono</p>
+		<img src="asitele/atono.png" alt="atono" /><img src="asitele/tatono.png"
+			alt="tatono" />
+		<p
+			class="subtext">atono&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>t</u>atono</p>
 		<br />
 
-		<img src="asitele/ako.png" alt="ako" /><img src="asitele/tako.png" alt="tako" />
-		<p class="subtext">ako&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>t</u>ako</p>
+		<img src="asitele/ako.png" alt="ako" /><img src="asitele/tako.png"
+			alt="tako" />
+		<p
+			class="subtext">ako&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>t</u>ako</p>
 		<br />
 		<hr />
 		<br />
@@ -168,24 +196,29 @@
 
 		<h1>Reading</h1>
 		<p>Translate the following phrases:</p>
-		<button title="Click to show/hide content" type="button" onclick="hide_display(1)">Show/hide answer</button>
+		<button title="Click to show/hide content" type="button"
+			onclick="hide_display(1)">Show/hide answer</button>
 		<p class="subtext-3">1. te-kili-ti-tako-tatono</p>
 		<input class="handwrite" type="text" />
 		<p id="spoiler1" class="spoiler">Two hundred and sixty-five (265)</p>
 		<br /><br />
-		<button title="Click to show/hide content" type="button" onclick="hide_display(4)">Show/hide answer</button>
+		<button title="Click to show/hide content" type="button"
+			onclick="hide_display(4)">Show/hide answer</button>
 		<p class="subtext-3">2. kili-mili-ti-kili-to-tako-ta</p>
 		<input class="handwrite" type="text" />
-		<p id="spoiler4" class="spoiler">One hundred thousand, three hundred and eighty-one (100,381)</p>
+		<p id="spoiler4" class="spoiler">One hundred thousand, three hundred and
+			eighty-one (100,381)</p>
 		<br /><br />
 		<h1>Writing</h1>
 		<p>Translate the following phrases:</p>
-		<button title="Click to show/hide content" type="button" onclick="hide_display(2)">Show/hide answer</button>
+		<button title="Click to show/hide content" type="button"
+			onclick="hide_display(2)">Show/hide answer</button>
 		<p class="subtext-3">1. Nine hundred and thirty-two (932)</p>
 		<input class="handwrite" type="text" />
 		<p id="spoiler2" class="spoiler">tatono-to-kili-tako-te-tatono-te</p>
 		<br /><br />
-		<button title="Click to show/hide content" type="button" onclick="hide_display(3)">Show/hide answer</button>
+		<button title="Click to show/hide content" type="button"
+			onclick="hide_display(3)">Show/hide answer</button>
 		<p class="subtext-3">Six thousand and ninety-nine (6,099)</p>
 		<input class="handwrite" type="text" />
 		<p id="spoiler3" class="spoiler">tatono-ta-mili-to-tako-ti-tatono-to</p>
@@ -193,10 +226,9 @@
 
 		<hr />
 		<br />
-		<strong
-			><p size="5">
-				<a href="3.html">&lt;===</a>&nbsp; &nbsp;<a href="avaka.html">HOME</a>&nbsp; &nbsp;<a href="5.html">===&gt;</a>
-			</p></strong
-		><br />
+		<strong><p size="5">
+				<a href="3.html">&lt;===</a>&nbsp; &nbsp;<a href="avaka.html">HOME</a>&nbsp;
+				&nbsp;<a href="5.html">===&gt;</a>
+			</p></strong><br />
 	</body>
 </html>

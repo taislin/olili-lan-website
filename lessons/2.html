@@ -17,6 +17,33 @@
 		<link rel="icon" type="image/png" href="asitele/ako.png" />
 	</head>
 	<body>
+		<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+		<link rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script>/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+	function myFunction() {
+	  var x = document.getElementById("myTopnav");
+	  if (x.className === "topnav") {
+		x.className += " responsive";
+	  } else {
+		x.className = "topnav";
+	  }
+	}</script>
+		<div class="topnav" id="myTopnav">
+			<a href="../index.html"
+				style="padding-top: 1px; padding-bottom: 1px; padding-right:8px;padding-left:8px;"><img
+					src="asitele/lan-asipine.png"
+					style="height: 50px;"></a>
+			<a href="../index.html">Home</a>
+			<a href="../grammar.html">Grammar</a>
+			<a href="../wordlist.html">Dictionary</a>
+			<a href="../lessons/avaka.html" class="active">Lessons</a>
+			<a href="../texts.html">Texts</a>
+			<a href="../translator.html">Translator</a>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<i class="fa fa-bars"></i>
+			</a>
+		</div>
 		<p class="title">epana lan asona, te (2)</p>
 		<p class="subtitle">Verbs, With, And, Negatives</p>
 		<hr />
@@ -26,10 +53,10 @@
 		<p class="subtext">anena</p>
 		<p class="centre">mountain</p>
 		<br />
-		<img src="asitele/akali.png" alt="akali" /><img src="asitele/etava.png" alt="etava" /><img
+		<img src="asitele/akali.png" alt="akali" /><img src="asitele/etava.png"
+			alt="etava" /><img
 			src="asitele/anena.png"
-			alt="anena"
-		/>
+			alt="anena" />
 		<p class="subtext"><br />akali&nbsp<u>etava</u>&nbspanena</p>
 		<p class="centre">[the] bird <u>goes</u> [to the] mountain</p>
 		<br />
@@ -39,37 +66,40 @@
 		<p class="subtext">ako</p>
 		<p class="centre">person</p>
 		<br />
-		<img src="asitele/ako.png" alt="ako" /><img src="asitele/etoki.png" alt="etoki" />
+		<img src="asitele/ako.png" alt="ako" /><img src="asitele/etoki.png"
+			alt="etoki" />
 		<p class="subtext">ako&nbsp<u>etoki</u></p>
 		<p class="centre">person <u>speaks/says</u></p>
 		<br />
-		<img src="asitele/ako.png" alt="ako" /><img src="asitele/etoki/etoki_aen.png" alt="etoki: akali etava anena" />
+		<img src="asitele/ako.png" alt="ako" /><img src="asitele/etoki/etoki_aen.png"
+			alt="etoki: akali etava anena" />
 		<p class="subtext">ako&nbsp<u>etoki</u>:&nbsp"akali etava anena"</p>
 		<p class="centre">person <u>says</u>: "the bird goes to the mountain"</p>
 		<br />
 		<hr />
 		<br />
-		<img src="asitele/kokoako.png" alt="koko-ako" /><img src="asitele/etoki.png" alt="etoki" /><img
+		<img src="asitele/kokoako.png" alt="koko-ako" /><img src="asitele/etoki.png"
+			alt="etoki" /><img
 			src="asitele/kakaako.png"
-			alt="kaka-ako"
-		/>
+			alt="kaka-ako" />
 		<p class="subtext">koko-ako etoki&nbsp<u>poka</u>&nbspkaka-ako</p>
 		<p class="centre">[the] man speaks <u>with</u> [the] woman</p>
 		<br />
-		<img src="asitele/kokoako.png" alt="koko-ako" /><img src="asitele/kakaako.png" alt="kaka-ako" />&nbsp<img
+		<img src="asitele/kokoako.png" alt="koko-ako" /><img src="asitele/kakaako.png"
+			alt="kaka-ako" />&nbsp<img
 			src="asitele/etava.png"
-			alt="etava"
-		/>&nbsp<img src="asitele/anena.png" alt="anena" />
+			alt="etava" />&nbsp<img src="asitele/anena.png" alt="anena" />
 		<p class="subtext">koko-ako&nbsp<u>vo</u>&nbspkaka-ako etava anena</p>
 		<p class="centre">[the] man <u>and</u> [the] woman go [to the] mountain</p>
 		<br />
 
-		<img src="asitele/ako.png" alt="ako" /><img src="asitele/akali.png" alt="akali" />&nbsp<img
+		<img src="asitele/ako.png" alt="ako" /><img src="asitele/akali.png"
+			alt="akali" />&nbsp<img
 			src="asitele/naetava.png"
-			alt="na etava"
-		/>&nbsp<img src="asitele/anena.png" alt="anena" />
+			alt="na etava" />&nbsp<img src="asitele/anena.png" alt="anena" />
 		<p class="subtext">ako&nbspvo&nbspakali <u>na</u>-etava anena</p>
-		<p class="centre">[the] man and [the] bird <u>do not</u> go [to the] mountain</p>
+		<p class="centre">[the] man and [the] bird <u>do not</u> go [to the]
+			mountain</p>
 		<br />
 		<hr />
 		<br />
@@ -116,22 +146,23 @@
 		<p class="subtext-3">1. kaka-ako etoki</p>
 		<input class="handwrite" type="text" />
 		<p id="spoiler1" class="spoiler">The woman speaks</p>
-		<br /><button title="Click to show/hide content" type="button" onclick="hide_display(1)">Show/hide answer</button>
+		<br /><button title="Click to show/hide content" type="button"
+			onclick="hide_display(1)">Show/hide answer</button>
 		<br /><br />
 		<h1>Writing</h1>
 		<p>Translate the following phrase:</p>
 		<p class="subtext-3">1. The man and the bird go to the mountain</p>
 		<input class="handwrite" type="text" />
 		<p id="spoiler2" class="spoiler">koko-ako vo akali etava anena</p>
-		<br /><button title="Click to show/hide content" type="button" onclick="hide_display(2)">Show/hide answer</button>
+		<br /><button title="Click to show/hide content" type="button"
+			onclick="hide_display(2)">Show/hide answer</button>
 		<br /><br />
 
 		<hr />
 		<br />
-		<strong
-			><p size="5">
-				<a href="1.html">&lt;===</a>&nbsp; &nbsp;<a href="avaka.html">HOME</a>&nbsp; &nbsp;<a href="3.html">===&gt;</a>
-			</p></strong
-		><br />
+		<strong><p size="5">
+				<a href="1.html">&lt;===</a>&nbsp; &nbsp;<a href="avaka.html">HOME</a>&nbsp;
+				&nbsp;<a href="3.html">===&gt;</a>
+			</p></strong><br />
 	</body>
 </html>

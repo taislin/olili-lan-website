@@ -17,6 +17,33 @@
 		<link rel="icon" type="image/png" href="asitele/ako.png" />
 	</head>
 	<body>
+		<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+		<link rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script>/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+	function myFunction() {
+	  var x = document.getElementById("myTopnav");
+	  if (x.className === "topnav") {
+		x.className += " responsive";
+	  } else {
+		x.className = "topnav";
+	  }
+	}</script>
+		<div class="topnav" id="myTopnav">
+			<a href="../index.html"
+				style="padding-top: 1px; padding-bottom: 1px; padding-right:8px;padding-left:8px;"><img
+					src="asitele/lan-asipine.png"
+					style="height: 50px;"></a>
+			<a href="../index.html">Home</a>
+			<a href="../grammar.html">Grammar</a>
+			<a href="../wordlist.html">Dictionary</a>
+			<a href="../lessons/avaka.html" class="active">Lessons</a>
+			<a href="../texts.html">Texts</a>
+			<a href="../translator.html">Translator</a>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<i class="fa fa-bars"></i>
+			</a>
+		</div>
 		<p class="title">epana lan asona, te-tatono-te (12)</p>
 		<p class="subtitle">Compound Words</p>
 		<hr />
@@ -67,22 +94,24 @@
 		<button
 			title="Click to show/hide content"
 			type="button"
-			onclick="if(document.getElementById('spoiler1') .style.display=='none') {document.getElementById('spoiler1') .style.display=''}else{document.getElementById('spoiler1') .style.display='none'}"
-		>
+			onclick="if(document.getElementById('spoiler1') .style.display=='none') {document.getElementById('spoiler1') .style.display=''}else{document.getElementById('spoiler1') .style.display='none'}">
 			Show/hide answer
 		</button>
 		<p class="subtext-3">1. ako etoki: "ilip kaka-akali"</p>
 		<input class="handwrite" type="text" />
-		<p id="spoiler1" class="spoiler">The person says/speaks: "They are male birds"</p>
+		<p id="spoiler1" class="spoiler">The person says/speaks:
+			"They are male birds"</p>
 		<br /><br />
 		<h1>Writing</h1>
 		<p>Translate the following phrases:</p>
-		<button title="Click to show/hide content" type="button" onclick="hide_display(2)">Show/hide answer</button>
+		<button title="Click to show/hide content" type="button"
+			onclick="hide_display(2)">Show/hide answer</button>
 		<p class="subtext-3">1. The bird is not big</p>
 		<input class="handwrite" type="text" />
 		<p id="spoiler2" class="spoiler">akali na-omama</p>
 		<br /><br />
-		<button title="Click to show/hide content" type="button" onclick="hide_display(3)">Show/hide answer</button>
+		<button title="Click to show/hide content" type="button"
+			onclick="hide_display(3)">Show/hide answer</button>
 		<p class="subtext-3">2. Those fishes are small</p>
 		<input class="handwrite" type="text" />
 		<p id="spoiler3" class="spoiler">la akala-s olili</p>
@@ -90,8 +119,7 @@
 
 		<hr />
 		<br />
-		<strong
-			><p size="5"><a href="11.html">&lt;===</a>&nbsp; &nbsp;<a href="avaka.html">HOME</a></p></strong
-		><br />
+		<strong><p size="5"><a href="11.html">&lt;===</a>&nbsp; &nbsp;<a
+					href="avaka.html">HOME</a></p></strong><br />
 	</body>
 </html>
