@@ -108,8 +108,8 @@ Stress is always in the penult syllable. Below is a phrase in olili-lan, the tra
 Stress
 
 | koko-ako, lo pi-eko tatono anaka-s, pi-etava avila pepe-aposa. |
-| -------------------------------------------------------------- | ------------------------------ | ------------------------------------ |
-| /ˈkɔ.kɔ-akɔ                                                    | lɔ pi ɛkɔ ta.ˈtɔ.nɔ a.ˈna.ka z | pi ɛ.ˈta.va a.ˈvi.la pɛ.pɛ a.ˈpɔ.sa/ |
+|-------------------------------------------------------------- |
+| /ˈkɔ.kɔ-akɔ lɔ pi ɛkɔ ta.ˈtɔ.nɔ a.ˈna.ka z pi ɛ.ˈta.va a.ˈvi.la pɛ.pɛ a.ˈpɔ.sa/ |
 | M-man, CONJ PST-have five children-PL, PST-go home now-day.    |
 | The man, who had five children, went home today.               |
 
