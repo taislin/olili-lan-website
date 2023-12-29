@@ -1,7 +1,6 @@
 # olili-lan dictionary
 
-According to the 7th edition of the official dictionary
-Published on 25/12/2023
+_7th Revision - 25/12/2023_
 
 | olili-lan      | english                                  |
 | -------------- | ---------------------------------------- |
